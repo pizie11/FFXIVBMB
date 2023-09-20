@@ -11,7 +11,8 @@ location_table = before_location_table_processed(location_table)
 
 count = starting_index + 500 # 500 each for items and locations
 custom_victory_location = {}
-victory_key = {}
+victory_key = None
+
 # add sequential generated ids to the lists
 for key, _ in enumerate(location_table):
     if "victory" in location_table[key] and location_table[key]["victory"]:
@@ -19,7 +20,7 @@ for key, _ in enumerate(location_table):
         victory_key = key # store the victory location to be removed later
         
         continue
-    
+
     location_table[key]["id"] = count
 
     if not "region" in location_table[key]:
@@ -27,7 +28,7 @@ for key, _ in enumerate(location_table):
 
     count += 1
 
-if victory_key:
+if victory_key is not None:
     location_table.pop(victory_key)
 
 # Add the game completion location, which will have the Victory item assigned to it automatically
@@ -41,6 +42,7 @@ location_table.append({
 
 location_id_to_name = {}
 location_name_to_location = {}
+
 for item in location_table:
     location_id_to_name[item["id"]] = item["name"]
     location_name_to_location[item["name"]] = item
