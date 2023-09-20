@@ -1,0 +1,194 @@
+
+{
+	"Limsa Lominsa": {
+		"requires": "|Limsa Lominsa and Middle La Noscea Access:1|",
+		"connects_to": [
+			"Lower La Noscea",
+			"Middle La Noscea",
+			"Western La Noscea",
+			"Eastern La Noscea"
+			
+		],
+		"starting": true
+	},
+	"Middle La Noscea": 
+	{
+		"requires": "|Limsa Lominsa and Middle La Noscea Access:1|",
+		"connects_to": [
+			"Limsa Lominsa",
+			"Lower La Noscea",
+			"Western La Noscea",
+			"Eastern La Noscea"
+		]
+	},
+	"Lower La Noscea": 
+	{
+		"requires": "|Lower La Noscea Access:1|",
+		"connects_to": [
+			"Limsa Lominsa",
+			"Middle La Noscea",
+			"Eastern La Noscea",
+			"Western La Noscea"
+		]
+	},
+	"Eastern La Noscea": 
+	{
+		"requires": "|Eastern La Noscea Access:1|",
+		"connects_to": [
+			"Lower La Noscea",
+			"Limsa Lominsa",
+			"Middle La Noscea",
+			"Upper La Noscea"
+		]
+	},
+	"Western La Noscea": 
+	{
+		"requires": "|Western La Noscea Access:1|",
+		"connects_to": [
+			"Middle La Noscea",
+			"Upper La Noscea",
+			"Limsa Lominsa",
+			"Lower La Noscea"
+		]
+	},
+	"Upper La Noscea": 
+	{
+		"requires": "|Upper La Noscea Access:1|",
+		"connects_to": [
+			"Outer La Noscea",
+			"Eastern La Noscea",
+			"Western La Noscea"
+		]
+
+	},
+	"Outer La Noscea": 
+	{
+		"requires": "|Outer La Noscea Access:1|",
+		"connects_to": ["Upper La Noscea"]
+	},
+	"Gridania": {
+		"requires": "|Gridania and Central Shroud Access:1|",
+		"connects_to": [
+			"Central Shroud",
+			"North Shroud",
+			"East Shroud"
+		],
+		"starting": true
+	},
+	"Central Shroud": 
+	{
+		"requires": "|Gridania and Central Shroud Access:1|",
+		"connects_to": [
+			"Gridania",
+			"North Shroud",
+			"East Shroud",
+			"South Shroud"
+		]
+	},
+	"East Shroud": 
+	{
+		"requires": "|East Shroud Access:1|",
+		"connects_to": [
+			"South Shroud",
+			"Central Shroud",
+			"Gridania"
+		]
+	},
+	"South Shroud": 
+	{
+		"requires": "|South Shroud Access:1|",
+		"connects_to": [
+			"Central Shroud",
+			"East Shroud",
+			"Eastern Thanalan"
+		]
+	},
+	"North Shroud": 
+	{
+		"requires": "|North Shroud Access:1|",
+		"connects_to": [
+			"Gridania",
+			"Central Shroud",
+			"Coerthas Central Highlands"
+		]
+	},
+	"Ul'dah": {
+		"requires": "|Ul'dah and Central Thanalan Access:1|",
+		"connects_to": [
+			"Central Thanalan",
+			"Western Thanalan",
+			"Masked Carnivale"
+		],
+		"starting": true
+	},
+	"Central Thanalan": 
+	{
+		"requires": "|Ul'dah and Central Thanalan Access:1|",
+		"connects_to": [
+			"Northern Thanalan",
+			"Eastern Thanalan",
+			"Southern Thanalan",
+			"Western Thanalan",
+			"Ul'dah"
+		]
+	},
+	"Masked Carnivale": 
+	{
+		"requires": "|Ul'dah and Central Thanalan Access:1| and |10 Equip Levels:5|",
+		"connects_to": ["Ul'dah"]
+	},
+	"Western Thanalan": 
+	{
+		"requires": "|Western Thanalan Access:1|",
+		"connects_to": [
+			"Ul'dah",
+			"Central Thanalan",
+			"Limsa Lominsa"
+		]
+	},
+	"Eastern Thanalan": 
+	{
+		"requires": "|Eastern Thanalan Access:1|",
+		"connects_to": [
+			"Central Thanalan",
+			"Southern Thanalan",
+			"South Shroud"
+		]
+	},
+	"Southern Thanalan": 
+	{
+		"requires": "|Southern Thanalan Access:1|",
+		"connects_to": [
+			"Eastern Thanalan",
+			"Central Thanalan"
+		]
+	},
+	"Northern Thanalan": 
+	{
+		"requires": "|Northern Thanalan Access:1|",
+		"connects_to": [
+			"Central Thanalan",
+			"Mor Dhona"
+		]
+	},
+	"Coerthas Central Highlands": 
+	{
+		"requires": "|Coerthas Central Highlands Access:1|",
+		"connects_to": [
+			"Mor Dhona",
+			"North Shroud"
+		]
+	},
+	"Mor Dhona": 
+	{
+		"requires": "|Mor Dhona Access:1|",
+		"connects_to": [
+			"Northern Thanalan",
+			"Coerthas Central Highlands"
+		]
+	},
+	"Solo Duty": {
+		"starting": true,
+		"requires": "(|#91 Basic Instinct| and |#30 Mighty Guard|) or (|#77 Aetherial Mimicry| and |#58 Pom Cure|) and |Spell Slot:2|"
+	}
+}

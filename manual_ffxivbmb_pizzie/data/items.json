@@ -1,0 +1,432 @@
+[
+	{
+		"name": "#1 Water Cannon",
+		"category": ["Damage","Magic"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#2 Flame Thrower",
+		"category": ["Damage","Magic"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#3 Aqua Breath",
+		"category": ["Damage","Magic"],
+		"count":1,
+		"useful": true
+	},
+	{
+		"name": "#4 Flying Frenzy",
+		"category": ["Damage", "Physical"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#5 Drill Cannons",
+		"category": ["Damage", "Physical"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#6 High Voltage",
+		"category": ["Damage","Magic"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#7 Loom",
+		"category": ["Utility"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#8 Final Sting",
+		"category": ["Final", "Physical"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#9 Song of Torment",
+		"category": ["DoT", "Magic"],
+		"count":1,
+		"useful": true
+	},
+	{
+		"name": "#10 Glower",
+		"category": ["Damage", "Magic"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#11 Plaincracker",
+		"category": ["Damage", "Magic"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#12 Bristle",
+		"category": ["Buff"],
+		"count":1,
+		"useful": true
+	},
+	{
+		"name": "#13 White Wind",
+		"category": ["Heal"],
+		"count":1
+	},
+	{
+		"name": "#14 Level 5 Petrify",
+		"category": ["Effect"],
+		"count":1
+	},
+	{
+		"name": "#15 Sharpened Knife",
+		"category": ["Damage", "Physical"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#16 Ice Spikes",
+		"category": ["DoT", "Magic"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#17 Blood Drain",
+		"category": ["Utility"],
+		"count":1,
+		"useful": true
+	},
+	{
+		"name": "#18 Acorn Bomb",
+		"category": ["Effect"],
+		"count":1
+	},
+	{
+		"name": "#19 Bomb Toss",
+		"category": ["Damage", "Magic"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#20 Off-Guard",
+		"category": ["Buff"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#21 Self-Destruct",
+		"category": ["Final", "Magic"],
+		"count":1
+	},
+	{
+		"name": "#22 Transfusion",
+		"category": ["Final"],
+		"count":1
+	},
+	{
+		"name": "#23 Faze",
+		"category": ["Effect"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#24 Flying Sardine",
+		"category": ["Effect"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#25 Snort",
+		"category": ["Effect"],
+		"count":1
+	},
+	{
+		"name": "#26 4-Tonze Weight",
+		"category": ["Damage", "Physical"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#27 The Look",
+		"category": ["Damage", "Magic"],
+		"count":1,
+		"useful": true
+	},
+	{
+		"name": "#28 Bad Breath",
+		"category": ["Effect"],
+		"count":1
+	},
+	{
+		"name": "#29 Diamondback",
+		"category": ["Buff"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#30 Mighty Guard",
+		"category": ["Buff"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#31 Sticky Tongue",
+		"category": ["Effect"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#32 Toad Oil",
+		"category": ["Buff"],
+		"count":1
+	},
+	{
+		"name": "#33 The Ram's Voice",
+		"category": ["Damage", "Magic"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#34 The Dragon's Voice",
+		"category": ["Damage", "Magic"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#35 Missile",
+		"category": ["Utility"],
+		"count":1
+	},
+	{
+		"name": "#36 1000 Needles",
+		"category": ["Damage","Physical"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#37 Ink Jet",
+		"category": ["Damage", "Magic"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#38 Fire Angon",
+		"category": ["Damage", "Physical"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#39 Moon Flute",
+		"category": ["Buff"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#40 Tail Screw",
+		"category": ["Utility"],
+		"count":1
+	},
+	{
+		"name": "#41 Mind Blast",
+		"category": ["Damage", "Magic"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#42 Doom",
+		"category": ["Effect"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#43 Peculiar Light",
+		"category": ["Effect"],
+		"count":1,
+		"useful": true
+	},
+	{
+		"name": "#44 Feather Rain",
+		"category": ["Cooldown", "Magic"],
+		"count":1,
+		"useful": true
+	},
+	{
+		"name": "#45 Eruption",
+		"category": ["Cooldown", "Magic"],
+		"count":1,
+		"useful": true
+	},
+	{
+		"name": "#46 Mountain Buster",
+		"category": ["Cooldown", "Physical"],
+		"count":1,
+		"useful": true
+	},
+	{
+		"name": "#47 Shock Strike",
+		"category": ["Cooldown", "Magic"],
+		"count":1,
+		"useful": true
+	},
+	{
+		"name": "#48 Glass Dance",
+		"category": ["Cooldown", "Magic"],
+		"count":1,
+		"useful": true
+	},
+	{
+		"name": "#49 Viel of the Whorl",
+		"category": ["DoT", "Magic"],
+		"count":1,
+		"useful": true
+	},
+	{
+		"name": "Limsa Lominsa and Middle La Noscea Access",
+		"category": ["Starting", "Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Gridania and Central Shroud Access",
+		"category": ["Starting", "Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Ul'dah and Central Thanalan Access",
+		"category": ["Starting", "Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Lower La Noscea Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Eastern La Noscea Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Western La Noscea Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Upper La Noscea Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Outer La Noscea Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "East Shroud Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "South Shroud Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "North Shroud Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Western Thanalan Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Eastern Thanalan Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Southern Thanalan Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Northern Thanalan Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Coerthas Central Highlands Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "Mor Dhona Access",
+		"category": ["Location"],
+		"count":2,
+		"progression": true
+	},
+	{
+		"name": "#58 Pom Cure",
+		"category": ["Heal","Duty"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#77 Aetherial Mimicry",
+		"category": ["Buff","Duty"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "#91 Basic Instinct",
+		"category": ["Buff","Duty"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "10 Equip Levels",
+		"category": ["Gear"],
+		"count":5,
+		"progression": true
+	},
+	{
+		"name": "Spell Slot",
+		"category": ["Gear"],
+		"count":24,
+		"progression": true
+	},
+	{
+		"name": "Use Self-Destruct",
+		"category": ["Trap"],
+		"count": 4,
+		"trap": true
+	},
+	{
+		"name": "Progresive Potions/Ethers",
+		"category": ["Gear"],
+		"count": 7,
+		"useful": true
+	}
+	
+
+]

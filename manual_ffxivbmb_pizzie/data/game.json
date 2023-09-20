@@ -1,0 +1,23 @@
+{
+	"game": "FFXIVBMB",
+	"player": "Pizzie",
+	"filler_item_name": "Lagomorph (Filler)",
+	"starting_items":[
+        {
+            "items": ["10 Equip Levels"],
+            "random": 1
+        },
+        {
+            "items": ["Spell Slot"],
+            "random": 1
+        },
+        {
+            "item_categories": ["Damage"],
+            "random": 1
+        },
+        {
+            "item_categories": ["Starting"],
+            "random": 1
+        }
+    ]
+}

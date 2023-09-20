@@ -1,0 +1,80 @@
+Manual_FFXIVBMB_Pizzie:
+    progression_balancing: 50
+    accessibility: items
+    
+    # Expected duty locations depending on settings
+    #               |Normal |Hard   |Savage | 
+    #   -------------------------------------  
+    #   Solo        |     47|     49|     49|
+    #   -------------------------------------
+    #   Light Party |     48|     50|     50|
+    #   -------------------------------------
+    #   Full Party  |     48|     50|     74|
+    #   -------------------------------------
+    #   Alliance    |     51|     53|     77|
+    #   -------------------------------------
+
+    # Add 24 MC locations for a total location count
+
+    # 4 x 17 = 68 FATE locations
+
+    ###---CONTENT SELECTIONS---###
+
+    # How many other players in this world will you be able to party up with, you should run duties only with other people trying the challenge.
+    # [Solo]        Just yourself, duties that can't be done solo are filtered out.
+    # [Light Party] 4 players all dungeons.
+    # [Full Party]  8 players, all dungeons, trials, and raids.
+    # [Alliance]    24 players, every duty in the game is set as a location.
+    party_size: solo
+
+    # Difficulty of the duty content.
+    # [Normal]  Excludes any duty that would take over 30 minutes to complete with the specified party size.
+    # [Hard]    Includes the above duties, but excludes extreme/savage duties.
+    # [Savage]  Every duty in the game is included in the location pool with respect to party size.
+    duty_diff: normal
+
+    # Determines the goal and what expansion content will be put in.
+    # Certain QoL spells for completing duties will still be included regardless of choice.
+    # [ARR]  MC #25 is the goal, all level 1-50 content is included.
+    # (NOT IMPLEMENTED)[HW]   MC #30 is the goal, all level 1-60 content is included. 
+    # (NOT IMPLEMENTED)[StB]  MC #31 is the goal, all level 1-70 content is included.
+    # (NOT IMPLEMENTED)[Shb]  MC #32 is the goal, all level 1-80 content is included.
+    expac_goal: arr
+    
+    # [Exclude] Excludes the three Main Scenario duties.
+    # [Include] Includes the three duties.
+    main_duties: exclude
+
+    # ###---ITEM POOL OPTIONS---###
+    # # NOTE: if there are more items than duty locations, FATEs locations will be added to match
+    
+    # # Gear mode
+    # # [Auto] Override any gear/level settings to instead automatically choose splits and increments, these will match the content selection as close as it can
+    # # [Manual] The below settings will take effect
+    # gear_mode: auto
+
+    # # Gear set splitting
+    # # [Full Set] Whole gear set progresses at once 
+    # # [Left Right] Left and right side progress separatley
+    # # [Individual] Each slot of gear progresses on it's own
+    # gear_split: full set
+
+    # # How many equip levels to increment per item
+    # # [1-10]
+    # lvl_inc: 10
+
+    # # How many Ilvl to increment per item
+    # # [10-100]
+    # ilvl_inc: 30 
+
+    # ###---GENERATION OPTIONS---###
+
+    # # After content selection, limit locations to reduce filler, this is done by removing random 50/60/70/80 duties, which make up the most of the bulk
+    # # This will not do anything if there are more items than locations.
+    # # [Limited] Limit locations within the items in the world
+    # # [Unlimited] No locations are removed 
+    # limit_locations: limited
+
+
+game: Manual_FFXIVBMB_Pizzie
+name: Player
