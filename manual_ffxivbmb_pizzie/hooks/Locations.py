@@ -40,7 +40,7 @@ def generate_duty_list():
         if row[0] != "" and row[0] != "Name":
             #print(', '.join(row))
             requires_str = "|10 Equip Levels:" + str(ceil(int(row[2])/10)) + "| and |" + row[4] + " Access:1|"
-            requires_str += ("and |" + row[7] + "|") if  (row[7] != "") else ""
+            requires_str += (" and |" + row[7] + "|") if  (row[7] != "") else ""
             #print(row[0]+": " + row[5] + "-" + row[6])
             duty_list.append(
                 {

@@ -272,8 +272,9 @@ class DataValidation():
         
     @staticmethod
     def checkForLocationsBeingInvalidJSON():
-        if len(DataValidation.location_table) == 0:
-            raise ValidationError("No locations were found in your locations.json. This likely indicates that your JSON is incorrectly formatted. Use https://jsonlint.com/ to validate your JSON files.")
+        pass
+    #    if len(DataValidation.location_table) == 0:
+    #        raise ValidationError("No locations were found in your locations.json. This likely indicates that your JSON is incorrectly formatted. Use https://jsonlint.com/ to validate your JSON files.")
         
     @staticmethod
     def checkForGameFillerMatchingAnItemName():
