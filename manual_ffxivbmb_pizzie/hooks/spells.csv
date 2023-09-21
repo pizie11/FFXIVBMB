@@ -1,0 +1,50 @@
+Name,Category,Type,Aspect 1,Aspect 2,Importance
+Water Cannon,Damage,Magic,Water,,progression
+Flame Thrower,Damage,Magic,Fire,,progression
+Aqua Breath,Damage,Magic,Water,,progression
+Flying Frenzy,Damage,Physical,Blunt,,progression
+Drill Cannons,Damage,Physical,Piercing,,progression
+High Voltage,Damage,Magic,Lightning,,progression
+Loom,Utility,,,,progression
+Final Sting,Final,Physical,Piercing,,filler
+Song of Torment,DoT,Magic,None,,useful
+Glower,Damage,Magic,Lightning,,progression
+Plaincracker,Damage,Magic,Earth,,progression
+Bristle,Buff,,,,useful
+White Wind,Utility,,,,useful
+Level 5 Petrify,Debuff,Magic,None,,useful
+Sharpened Knife,Damage,Physical,Slashing,,progression
+Ice Spikes,DoT,Magic,Ice,,progression
+Blood Drain,Utility,Magic,None,,useful
+Acorn Bomb,Debuff,Magic,None,,useful
+Bomb Toss,Damage,Magic,Fire,,progression
+Off-guard,Debuff,Magic,None,,progression
+Self-destruct,Final,Magic,Fire,,filler
+Transfusion,Final,Magic,None,,filler
+Faze,Debuff,Magic,None,,progression
+Flying Sardine,Debuff,Physical,Piercing,,progression
+Snort,Utility,Magic,Wind,,useful
+4-tonze Weight,Damage,Physical,Blunt,,progression
+The Look,Damage,Magic,None,,progression
+Bad Breath,Debuff,Magic,None,,useful
+Diamondback,Buff,,,,progression
+Mighty Guard,Buff,,,,progression
+Sticky Tongue,Debuff,Physical,Blunt,,progression
+Toad Oil,Buff,,,,useful
+The Ram’s Voice,Damage,Magic,Ice,,progression
+The Dragon’s Voice,Damage,Magic,Lightning,,progression
+Missile,Utility,Magic,None,,progression
+1000 Needles,Cooldown,Physical,Piercing,,progression
+Ink Jet,Damage,Magic,None,,progression
+Fire Angon,Damage,Physical,Piercing,Fire,progression
+Moon Flute,Buff,,,,progression
+Tail Screw,Utility,Magic,None,,useful
+Mind Blast,Damage,Magic,None,,progression
+Doom,Debuff,,,,progression
+Peculiar Light,Debuff,Magic,None,,useful
+Feather Rain,Cooldown,Magic,Wind,,useful
+Eruption,Cooldown,Magic,Fire,,useful
+Mountain Buster,Cooldown,Physical,Blunt,Earth,useful
+Shock Strike,Cooldown,Magic,Lightning,,useful
+Glass Dance,Cooldown,Magic,Ice,,useful
+Veil of the Whorl,Cooldown,Magic,Water,,useful

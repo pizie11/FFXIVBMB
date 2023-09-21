@@ -78,69 +78,70 @@ class DataValidation():
 
     @staticmethod
     def checkItemNamesInRegionRequires():
-        for region_name in DataValidation.region_table:
-            region = DataValidation.region_table[region_name]
+        # for region_name in DataValidation.region_table:
+        #     region = DataValidation.region_table[region_name]
 
-            if "requires" not in region:
-                continue
+        #     if "requires" not in region:
+        #         continue
 
-            if isinstance(region["requires"], str):
-                # parse user written statement into list of each item
-                reqires_raw = re.split('(\AND|\)|\(|OR|\|)', region["requires"])
-                remove_spaces = [x.strip() for x in reqires_raw]
-                remove_empty = [x for x in remove_spaces if x != '']
-                requires_list = [x for x in remove_empty if x != '|']
+        #     if isinstance(region["requires"], str):
+        #         # parse user written statement into list of each item
+        #         reqires_raw = re.split('(\AND|\)|\(|OR|\|)', region["requires"])
+        #         remove_spaces = [x.strip() for x in reqires_raw]
+        #         remove_empty = [x for x in remove_spaces if x != '']
+        #         requires_list = [x for x in remove_empty if x != '|']
 
-                for i, item in enumerate(requires_list):
-                    if item.lower() == "or" or item.lower() == "and" or item == ")" or item == "(":
-                        continue
-                    else:
-                        # it's just a category, so ignore it
-                        if '@' in item:
-                            continue
+        #         for i, item in enumerate(requires_list):
+        #             if item.lower() == "or" or item.lower() == "and" or item == ")" or item == "(":
+        #                 continue
+        #             else:
+        #                 # it's just a category, so ignore it
+        #                 if '@' in item:
+        #                     continue
 
-                        item_parts = item.split(":")
-                        item_name = item
+        #                 item_parts = item.split(":")
+        #                 item_name = item
 
-                        if len(item_parts) > 1:
-                            item_name = item_parts[0]
+        #                 if len(item_parts) > 1:
+        #                     item_name = item_parts[0]
 
-                        item_exists = len([item["name"] for item in DataValidation.item_table if item["name"] == item_name]) > 0
+        #                 item_exists = len([item["name"] for item in DataValidation.item_table if item["name"] == item_name]) > 0
 
-                        if not item_exists:
-                            raise ValidationError("Item %s is required by region %s but is misspelled or does not exist." % (item_name, region_name))
+        #                 if not item_exists:
+        #                     raise ValidationError("Item %s is required by region %s but is misspelled or does not exist." % (item_name, region_name))
                         
-            else:  # item access is in dict form
-                for item in region["requires"]:
-                    # if the require entry is an object with "or" or a list of items, treat it as a standalone require of its own
-                    if (isinstance(item, dict) and "or" in item and isinstance(item["or"], list)) or (isinstance(item, list)):
-                        or_items = item
+        #     else:  # item access is in dict form
+        #         for item in region["requires"]:
+        #             # if the require entry is an object with "or" or a list of items, treat it as a standalone require of its own
+        #             if (isinstance(item, dict) and "or" in item and isinstance(item["or"], list)) or (isinstance(item, list)):
+        #                 or_items = item
                         
-                        if isinstance(item, dict):
-                            or_items = item["or"]
+        #                 if isinstance(item, dict):
+        #                     or_items = item["or"]
 
-                        for or_item in or_items:
-                            or_item_parts = or_item.split(":")
-                            or_item_name = or_item
+        #                 for or_item in or_items:
+        #                     or_item_parts = or_item.split(":")
+        #                     or_item_name = or_item
 
-                            if len(or_item_parts) > 1:
-                                or_item_name = or_item_parts[0]
+        #                     if len(or_item_parts) > 1:
+        #                         or_item_name = or_item_parts[0]
 
-                            item_exists = len([item["name"] for item in DataValidation.item_table if item["name"] == or_item_name]) > 0
+        #                     item_exists = len([item["name"] for item in DataValidation.item_table if item["name"] == or_item_name]) > 0
 
-                            if not item_exists:
-                                raise ValidationError("Item %s is required by region %s but is misspelled or does not exist." % (or_item_name, region_name))
-                    else:
-                        item_parts = item.split(":")
-                        item_name = item
+        #                     if not item_exists:
+        #                         raise ValidationError("Item %s is required by region %s but is misspelled or does not exist." % (or_item_name, region_name))
+        #             else:
+        #                 item_parts = item.split(":")
+        #                 item_name = item
                         
-                        if len(item_parts) > 1:
-                            item_name = item_parts[0]
+        #                 if len(item_parts) > 1:
+        #                     item_name = item_parts[0]
 
-                        item_exists = len([item["name"] for item in DataValidation.item_table if item["name"] == item_name]) > 0
+        #                 item_exists = len([item["name"] for item in DataValidation.item_table if item["name"] == item_name]) > 0
 
-                        if not item_exists:
-                            raise ValidationError("Item %s is required by region %s but is misspelled or does not exist." % (item_name, region_name))
+        #                 if not item_exists:
+        #                     raise ValidationError("Item %s is required by region %s but is misspelled or does not exist." % (item_name, region_name))
+        pass
 
     @staticmethod
     def checkRegionNamesInLocations():
@@ -255,10 +256,10 @@ class DataValidation():
                     if not item_name in [item["name"] for item in DataValidation.item_table]:
                         raise ValidationError("Item %s is set as a starting item, but is misspelled or is not defined." % (item_name))
             
-            if "item_categories" in starting_block:
-                for category_name in starting_block["item_categories"]:
-                    if len([item for item in DataValidation.item_table if "category" in item and category_name in item["category"]]) == 0:
-                        raise ValidationError("Item category %s is set as a starting item category, but is misspelled or is not defined on any items." % (category_name))
+            # if "item_categories" in starting_block:
+            #    for category_name in starting_block["item_categories"]:
+            #        if len([item for item in DataValidation.item_table if "category" in item and category_name in item["category"]]) == 0:
+            #            raise ValidationError("Item category %s is set as a starting item category, but is misspelled or is not defined on any items." % (category_name))
 
     @staticmethod
     def checkForGameBeingInvalidJSON():

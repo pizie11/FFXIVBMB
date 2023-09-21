@@ -29,7 +29,7 @@ short_long = {
 }
 
 mag_spells = "(|#1 Water Cannon| or |#2 Flame Thrower| or |#3 Aqua Breath| or |#6 High Voltage| or |#10 Glower| or |#11 Plaincracker| or |#19 Bomb Toss| or |#33 The Ram's Voice| or |#34 The Dragon's Voice| or |#37 Ink Jet| or |#41 Mind Blast|)"
-phys_spells = "(|#4 Flying Frenzy| or |#5 Drill Cannons| or |#15 Sharpened Knife| or |#26 4-Tonze Weight| or |#38 Fire Angon|)"
+phys_spells = "(|#4 Flying Frenzy| or |#5 Drill Cannons| or |#15 Sharpened Knife| or |#26 4-tonze Weight| or |#38 Fire Angon|)"
 
 def generate_duty_list():
     duty_list = []
@@ -46,7 +46,7 @@ def generate_duty_list():
                 {
                     "name": row[0],
                     "region": "Solo Duty",
-                    "category": [row[1], row[4]],
+                    "category": [row[1]], #, row[4]],
                     "requires": requires_str,
                     "party" : row[5],
                     "diff" : row[6],
@@ -78,19 +78,19 @@ def before_location_table_processed(location_table: list) -> list:
     mc_list[13]['requires'] = "|#7 Loom| or |#29 Diamondback|  and |Spell Slot:2|" #MC #14
     mc_list[14]['requires'] = "|#18 Acorn Bomb| and |Spell Slot:2|" #MC 15
     mc_list[15]['requires'] = "|#7 Loom| or |#29 Diamondback| and |Spell Slot:2|" #MC #16
-    mc_list[18]['requires'] = phys_spells + "and |#37 Inkjet| and |Spell Slot1:3|" #MC #19
+    mc_list[18]['requires'] = phys_spells + "and |#37 Inkjet| and |Spell Slot:3|" #MC #19
     mc_list[19]['requires'] = "|#29 Diamondback| and |Spell Slot:2|" #MC #20
     mc_list[20]['requires'] = "|#7 Loom| or |#29 Diamondback| and |Spell Slot:2|" #MC #21
     mc_list[21]['requires'] = "|#7 Loom| or |#29 Diamondback| and |Spell Slot:2|" #MC #22
     mc_list[22]['requires'] = "|#29 Diamondback| and |Spell Slot:2|" #MC #23
-    mc_list[23]['requires'] = mag_spells +" and " + phys_spells +"  and |#29 Diamondback|",
+    mc_list[23]['requires'] = mag_spells +" and " + phys_spells +"  and |#29 Diamondback| and |Spell Slot:3|"
     
     #Final Challenge
     mc_list.append({
         "name": "Masked Carnivale #25",
         "region": "Masked Carnivale",
         "category": ["Masked Carnivale"],
-        "requires": "|#7 Loom| and "+ mag_spells +" and " + phys_spells +" and |Spell Slot:3|",
+        "requires": "|#7 Loom| and " + mag_spells + " and " + phys_spells + " and |Spell Slot:3|",
         "victory": True
     })
 
@@ -170,7 +170,7 @@ def create_FATE_location(number, key, lvl):
     return { 
             "name": short_long[key] + ": FATE #" + str(number),
             "region": short_long[key],
-            "category": ["FATEs", key],
+            "category": ["FATEs"], #, short_long[key]],
             "requires": "|10 Equip Levels:" + str(ceil(lvl/10)) + "|"
         }
 
