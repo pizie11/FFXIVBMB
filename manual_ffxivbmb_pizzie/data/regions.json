@@ -256,6 +256,6 @@
 	},
 	"Solo Duty": {
 		"starting": true,
-		"requires": "(|#91 Basic Instinct| and |#30 Mighty Guard|) or (|#77 Aetherial Mimicry| and |#58 Pom Cure|) and |Spell Slot:2|"
+		"requires": "|#91 Basic Instinct| and |#30 Mighty Guard| and |#77 Aetherial Mimicry| and |#58 Pom Cure| and |Spell Slot:2|"
 	}												
 }
