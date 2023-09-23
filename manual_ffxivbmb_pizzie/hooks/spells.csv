@@ -24,7 +24,7 @@ Self-destruct,Final,Magic,Fire,,filler
 Transfusion,Final,Magic,None,,filler
 Faze,Debuff,Magic,None,,progression
 Flying Sardine,Debuff,Physical,Piercing,,progression
-Snort,Utility,Magic,Wind,,useful
+Snort,Utility,Magic,Wind,,progression
 4-tonze Weight,Damage,Physical,Blunt,,progression
 The Look,Damage,Magic,None,,progression
 Bad Breath,Debuff,Magic,None,,useful
@@ -57,7 +57,7 @@ Electrogenesis,Damage,Magic,Lightning,,progression
 Kalstrahl,Damage,Physical,Slashing,,progression
 Abyssal Transfixion,Damage,Physical,Piercing,,progression
 Chirp,Debuff,Magic,None,,useful
-Eerie Soundwave,Debuff,Magic,None,,useful
+Eerie Soundwave,Debuff,Magic,None,,progression
 Pom Cure,Heal,,,,progression
 Gobskin,Buff,Magic,None,,useful
 Magic Hammer,Damage,Magic,None,,progression
@@ -69,8 +69,11 @@ White Knight’s Tour,Damage,Magic,None,,progression
 Black Knight’s Tour,Damage,Magic,None,,progression
 Level 5 Death,Utility,Magic,None,,useful
 Launcher,Utility,Magic,None,,useful
+Perpetual Ray,Damage,Magic,None,,progression
+Cactguard,Buff,,,,useful
+Revenge Blast,Utility,Physical,Blunt,,useful
 Angel Whisper,Heal,,,,useful
-Exuviation,Heal,,,,useful
+Exuviation,Heal,,,,progression
 Reflux,Damage,Magic,Lightning,,progression
 Devour,Cooldown,Magic,None,,progression
 Condensed Libra,Buff,Magic,None,,useful

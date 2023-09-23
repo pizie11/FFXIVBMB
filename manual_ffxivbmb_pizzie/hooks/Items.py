@@ -9,8 +9,8 @@ def generate_spell_list():
     spellreader = csv.reader(pkgutil.get_data(__name__, "spells.csv").decode().splitlines(), delimiter=',', quotechar='|')
     count = 1
     for row in spellreader:
-        if row[0] != "" and row[0] != "Name":
-            #print("#" + str(count) + " " + row[0])
+        if row[0] != "" and row[0] != "Name" and row[0] != "ARR" and row[0] != "HW" and row[0] != "STB" and row[0] != "SHB":
+            print("#" + str(count) + " " + row[0])
             spell_list.append(
                 {
                     "name": "#" + str(count) + " " + row[0],

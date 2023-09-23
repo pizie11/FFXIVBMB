@@ -103,14 +103,44 @@
 		"progression": true
 	},
 	{
-		"name": "#58 Pom Cure",
-		"category": ["Heal","Duty"],
+		"name": "Ishgard Access",
+		"category": ["Location"],
 		"count":1,
 		"progression": true
 	},
 	{
-		"name": "#77 Aetherial Mimicry",
-		"category": ["Buff","Duty"],
+		"name": "Coerthas Western Highlands Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Sea of Clouds Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Dravanian Forelands Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Churning Mists Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Dravanian Hinterlands and Idyllshire Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Azys Lla Access",
+		"category": ["Location"],
 		"count":1,
 		"progression": true
 	},

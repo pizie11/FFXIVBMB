@@ -25,7 +25,16 @@ short_long = {
     "NT": "Northern Thanalan",
 
     "CCH": "Coerthas Central Highlands",
+    "CWH": "Coerthas Western Highlands",
+
     "MD": "Mor Dhona",
+
+    "TSC": "The Sea of Clouds",
+    "AL": "Azys Lla",
+
+    "TDF": "The Dravanian Forelands",
+    "TCM": "The Churning Mists",
+    "TDH": "The Dravanian Hinterlands"
 }
 
 mag_spells = "(|#1 Water Cannon| or |#2 Flame Thrower| or |#3 Aqua Breath| or |#6 High Voltage| or |#10 Glower| or |#11 Plaincracker| or |#19 Bomb Toss| or |#33 The Ram's Voice| or |#34 The Dragon's Voice| or |#37 Ink Jet| or |#41 Mind Blast|)"
@@ -37,7 +46,7 @@ def generate_duty_list():
     dutyreader = csv.reader(pkgutil.get_data(__name__, "duties.csv").decode().splitlines(), delimiter=',', quotechar='|')
     
     for row in dutyreader:
-        if row[0] != "" and row[0] != "Name":
+        if row[0] != "" and row[0] != "Name" and row[0] != "ARR" and row[0] != "HW" and row[0] != "STB" and row[0] != "SHB":
             #print(', '.join(row))
             requires_str = "|10 Equip Levels:" + str(ceil(int(row[2])/10)) + "| and |" + row[4] + " Access:1|"
             requires_str += (" and |" + row[7] + "|") if  (row[7] != "") else ""
@@ -63,7 +72,7 @@ def before_location_table_processed(location_table: list) -> list:
     
     # add Masked Carnivale locations
     mc_list = []
-    for i in range(1,25):
+    for i in range(1,30):
         mc_list.append({ 
             "name": "Masked Carnivale #" + str(i),
             "region": "Masked Carnivale",
@@ -83,14 +92,20 @@ def before_location_table_processed(location_table: list) -> list:
     mc_list[20]['requires'] = "|#7 Loom| or |#29 Diamondback| and |Spell Slot:2|" #MC #21
     mc_list[21]['requires'] = "|#7 Loom| or |#29 Diamondback| and |Spell Slot:2|" #MC #22
     mc_list[22]['requires'] = "|#29 Diamondback| and |Spell Slot:2|" #MC #23
-    mc_list[23]['requires'] = mag_spells +" and " + phys_spells +"  and |#29 Diamondback| and |Spell Slot:3|"
-    
+    mc_list[23]['requires'] = mag_spells +" and " + phys_spells +"  and |#29 Diamondback| and |Spell Slot:3|" #MC 24
+    mc_list[24]['requires'] = "|#7 Loom| and " + mag_spells + " and " + phys_spells + " and |Spell Slot:3|" #MC 25
+
+    mc_list[25]['requires'] = "|10 Equip Levels:6| and |#57 Eerie Soundwave| and |#73 Exuviation| and |Spell Slot:3|" #MC 26
+    mc_list[26]['requires'] = "|10 Equip Levels:6| and |#1 Water Cannon| and (|#31 Sticky Tongue| or |#25 Snort| or |#51 Protean Wave|) and |Spell Slot:3|" #MC 27
+    mc_list[27]['requires'] = "|10 Equip Levels:6| and |#38 Fire Angon| and |Spell Slot:2|" #MC 28
+    mc_list[28]['requires'] = "|10 Equip Levels:6| and |#24 Flying Sardine| and |#53 Electrogenesis| and |#29 Diamondback| and |Spell Slot:4|" #MC 29
+
     #Final Challenge
     mc_list.append({
-        "name": "Masked Carnivale #25",
+        "name": "Masked Carnivale #30",
         "region": "Masked Carnivale",
         "category": ["Masked Carnivale"],
-        "requires": "|#7 Loom| and " + mag_spells + " and " + phys_spells + " and |Spell Slot:3|",
+        "requires": "|#73 Exuviation| and |#55 Abyssal Transfixion| and |Spell Slot:3|",
         "victory": True
     })
 
@@ -118,7 +133,16 @@ def before_location_table_processed(location_table: list) -> list:
         "NT": [49,49,49,49],
 
         "CCH": [35,35,35,36,36,36,36,37,37,38,38,38,38,38,38,38,39,39,39,39,39,40,40,40,40,40,45,45,45,46,47,47,48,49,49,49,50,50],
+        "CWH": [50],
+
         "MD": [44,44,44,45,45,45,45,46,46,46,46,46,46,48],
+
+        "TSC": [50],
+        "AL": [59],
+
+        "TDF": [52],
+        "TCM": [54],
+        "TDH": [58]
     }
 
     for key in list(fate_zones.keys()):

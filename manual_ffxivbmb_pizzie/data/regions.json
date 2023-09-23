@@ -6,8 +6,8 @@
 			"Lower La Noscea",
 			"Middle La Noscea",
 			"Western La Noscea",
-			"Eastern La Noscea"
-			
+			"Eastern La Noscea",
+			"Ishgard"
 		],
 		"starting": true
 	},
@@ -71,7 +71,8 @@
 		"connects_to": [
 			"Central Shroud",
 			"North Shroud",
-			"East Shroud"
+			"East Shroud",
+			"Ishgard"
 		],
 		"starting": true
 	},
@@ -117,7 +118,8 @@
 		"connects_to": [
 			"Central Thanalan",
 			"Western Thanalan",
-			"Masked Carnivale"
+			"Masked Carnivale",
+			"Ishgard"
 		],
 		"starting": true
 	},
@@ -176,7 +178,8 @@
 		"requires": "|Coerthas Central Highlands Access:1|",
 		"connects_to": [
 			"Mor Dhona",
-			"North Shroud"
+			"North Shroud",
+			"Ishgard"
 		]
 	},
 	"Mor Dhona": 
@@ -185,6 +188,70 @@
 		"connects_to": [
 			"Northern Thanalan",
 			"Coerthas Central Highlands"
+		]
+	},
+
+	"Ishgard":
+	{
+		"requires": "|Ishgard Access:1|",
+		"connects_to": [
+			"Limsa Lominsa",
+			"Gridania",
+			"Ul'dah",
+			"Coerthas Central Highlands",
+			"Coerthas Western Highlands",
+			"The Sea of Clouds",
+			"Azys Lla"
+		]
+	},
+	"Coerthas Western Highlands":
+	{
+		"requires": "|Coerthas Western Highlands Access:1|",
+		"connects_to": [
+			"The Sea of Clouds",
+			"The Dravanian Forelands",
+			"The Dravanian Hinterlands",
+			"Ishgard"
+		]
+	},
+	"The Sea of Clouds":
+	{
+		"requires": "|The Sea of Clouds Access:1|",
+		"connects_to": [
+			"Ishgard",
+			"Coerthas Western Highlands"
+		]
+	},
+	"The Dravanian Forelands":
+	{
+		"requires": "|The Dravanian Forelands Access:1|",
+		"connects_to": [
+			"The Churning Mists",
+			"The Dravanian Hinterlands",
+			"Coerthas Western Highlands"
+		]
+	},
+	"The Churning Mists":
+	{
+		"requires": "|The Churning Mists Access:1|",
+		"connects_to": [
+			"The Dravanian Forelands",
+			"The Dravanian Hinterlands"
+		]
+	},
+	"The Dravanian Hinterlands":
+	{
+		"requires": "|The Dravanian Hinterlands and Idyllshire Access:1|",
+		"connects_to": [
+			"The Dravanian Forelands",
+			"Coerthas Western Highlands"
+		]
+	},
+	"Azys Lla":
+	{
+		"requires": "|Azys Lla Access:1|",
+		"connects_to:": [
+			"Ishgard"
 		]
 	},
 	"Solo Duty": {
