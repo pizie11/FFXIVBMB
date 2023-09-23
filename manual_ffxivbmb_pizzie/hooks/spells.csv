@@ -1,4 +1,5 @@
 Name,Category,Type,Aspect 1,Aspect 2,Importance
+ARR,,,,,
 Water Cannon,Damage,Magic,Water,,progression
 Flame Thrower,Damage,Magic,Fire,,progression
 Aqua Breath,Damage,Magic,Water,,progression
@@ -48,3 +49,34 @@ Mountain Buster,Cooldown,Physical,Blunt,Earth,useful
 Shock Strike,Cooldown,Magic,Lightning,,useful
 Glass Dance,Cooldown,Magic,Ice,,useful
 Veil of the Whorl,Cooldown,Magic,Water,,useful
+HW,,,,,
+Alpine Draft,Damage,Magic,Wind,,progression
+Protean Wave,Damage,Magic,Water,,progression
+Northerlies,Damage,Magic,Ice,,progression
+Electrogenesis,Damage,Magic,Lightning,,progression
+Kalstrahl,Damage,Physical,Slashing,,progression
+Abyssal Transfixion,Damage,Physical,Piercing,,progression
+Chirp,Debuff,Magic,None,,useful
+Eerie Soundwave,Debuff,Magic,None,,useful
+Pom Cure,Heal,,,,progression
+Gobskin,Buff,Magic,None,,useful
+Magic Hammer,Damage,Magic,None,,progression
+Avail,Final,,,,filler
+Frog Legs,Utility,Magic,None,,useful
+Sonic Boom,Damage,Magic,Wind,,progression
+Whistle,Buff,,,,useful
+White Knight’s Tour,Damage,Magic,None,,progression
+Black Knight’s Tour,Damage,Magic,None,,progression
+Level 5 Death,Utility,Magic,None,,useful
+Launcher,Utility,Magic,None,,useful
+Angel Whisper,Heal,,,,useful
+Exuviation,Heal,,,,useful
+Reflux,Damage,Magic,Lightning,,progression
+Devour,Cooldown,Magic,None,,progression
+Condensed Libra,Buff,Magic,None,,useful
+Aetheric Mimicry,Buff,,,,progression
+Surpanakha,Magic,Earth,,,useful
+Quasar,Magic,None,,,useful
+J Kick,Physical,Blunt,,,useful
+STB,,,,,
+SHB,,,,,
