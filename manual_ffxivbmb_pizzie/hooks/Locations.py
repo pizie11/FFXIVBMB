@@ -48,7 +48,7 @@ def generate_duty_list():
     for row in dutyreader:
         if row[0] != "" and row[0] != "Name" and row[0] != "ARR" and row[0] != "HW" and row[0] != "STB" and row[0] != "SHB":
             #print(', '.join(row))
-            requires_str = "|10 Equip Levels:" + str(ceil(int(row[2])/10)) + "| and |" + row[4] + " Access:1|"
+            requires_str = "|10 Equip Levels:" + str(ceil(int(row[2])/10)) + "| and |10 ILVL:" + str(ceil(int(row[3])/10)) + "| and |" + row[4] + " Access:1|"
             requires_str += (" and |" + row[7] + "|") if  (row[7] != "") else ""
             #print(row[0]+": " + row[5] + "-" + row[6])
             duty_list.append(
@@ -57,10 +57,21 @@ def generate_duty_list():
                     "region": "Solo Duty",
                     "category": [row[1]], #, row[4]],
                     "requires": requires_str,
+                    #"level" : row[3]
                     "party" : row[5],
                     "diff" : row[6],
                 }
             )
+
+    # # Take out 15 50 duties at random
+    # remove_50 = 15
+    # # Take out 10 60 duties at random
+    # remove_60 = 10
+    # for duty in duty_list:
+    #     if duty['level'] == 50:
+
+
+
     return duty_list
     
 
@@ -95,17 +106,17 @@ def before_location_table_processed(location_table: list) -> list:
     mc_list[23]['requires'] = mag_spells +" and " + phys_spells +"  and |#29 Diamondback| and |Spell Slot:3|" #MC 24
     mc_list[24]['requires'] = "|#7 Loom| and " + mag_spells + " and " + phys_spells + " and |Spell Slot:3|" #MC 25
 
-    mc_list[25]['requires'] = "|10 Equip Levels:6| and |#57 Eerie Soundwave| and |#73 Exuviation| and |Spell Slot:3|" #MC 26
-    mc_list[26]['requires'] = "|10 Equip Levels:6| and |#1 Water Cannon| and (|#31 Sticky Tongue| or |#25 Snort| or |#51 Protean Wave|) and |Spell Slot:3|" #MC 27
-    mc_list[27]['requires'] = "|10 Equip Levels:6| and |#38 Fire Angon| and |Spell Slot:2|" #MC 28
-    mc_list[28]['requires'] = "|10 Equip Levels:6| and |#24 Flying Sardine| and |#53 Electrogenesis| and |#29 Diamondback| and |Spell Slot:4|" #MC 29
+    mc_list[25]['requires'] = "|10 Equip Levels:6| and |10 ILVL:27| and |#57 Eerie Soundwave| and |#73 Exuviation| and |Spell Slot:3|" #MC 26
+    mc_list[26]['requires'] = "|10 Equip Levels:6| and |10 ILVL:27| and |#1 Water Cannon| and (|#31 Sticky Tongue| or |#25 Snort| or |#51 Protean Wave|) and |Spell Slot:3|" #MC 27
+    mc_list[27]['requires'] = "|10 Equip Levels:6| and |10 ILVL:27| and |#38 Fire Angon| and |Spell Slot:2|" #MC 28
+    mc_list[28]['requires'] = "|10 Equip Levels:6| and |10 ILVL:27| and |#24 Flying Sardine| and |#53 Electrogenesis| and |#29 Diamondback| and |Spell Slot:4|" #MC 29
 
     #Final Challenge
     mc_list.append({
         "name": "Masked Carnivale #30",
         "region": "Masked Carnivale",
         "category": ["Masked Carnivale"],
-        "requires": "|#73 Exuviation| and |#55 Abyssal Transfixion| and |Spell Slot:3|",
+        "requires": "|10 Equip Levels:6| and |#73 Exuviation| and |#55 Abyssal Transfixion| and |Spell Slot:3|",
         "victory": True
     })
 
@@ -114,42 +125,43 @@ def before_location_table_processed(location_table: list) -> list:
     #add FATE locations
     fate_list = []
     fate_zones = {
-        "MLN": [3,4,5,5,6,7,7,8,9,10,12,13,14,14,14], 
-        "LLN": [3,4,5,6,7,8,9,9,10,10,11,12,13],
-        "ELN": [30,30,31,32,32,32,32,32,32,32,32,32,33,33,33,33,33,33,33,33,34],
-        "WLN": [10,10,12,12,13,15,15,16,16,17,17,18,18,40,40,44,44,44,45,45,46,48,49],
-        "ULN": [20,20,20,20,21,23,30,30,31,31,33,33,34], 
-        "OLN": [30,34,34,34,34,34,34,41,41,41,44,47,47,47,49],
+        "MLN": [3,3], 
+        "LLN": [3,3],
+        "ELN": [30,30],
+        "WLN": [10,10,],
+        "ULN": [20,20], 
+        "OLN": [30,30],
 
-        "CS": [4,5,5,7,8,8,9,9,10,10,11,11,12,13,14,30,30,31,31,31,33,34,43,50],
-        "ES": [11,11,16,17,19,19,20,20,21,23,40,40,42,42,42,43,44,46,47,47,49,49,49,49],
-        "SS": [21,22,22,22,23,24,28,29,29,29,30,31,32,32,32,32,32,33,34,46],
-        "NS": [3,3,5,7,8,25,27,27,28,28,37,37,47,48],
+        "CS": [4,4],
+        "ES": [11,11],
+        "SS": [21,21],
+        "NS": [3,3],
         
-        "CT": [5,5,5,6,7,7,7,9,9,11,12,14,14],
-        "WT": [5,5,6,8,8,8,9,9,10,10,10,13,13,20,21,22,22,23],
-        "ET": [15,17,17,17,17,17,18,18,19,26,26,26,26,26,26,27,29,40,42,42,42],
-        "ST": [25,26,27,28,28,29,31,31,32,32,32,45,45,46,46,46,46,46,46,48,48,48,48,49,49,49,49],
-        "NT": [49,49,49,49],
+        "CT": [5,5],
+        "WT": [5,5],
+        "ET": [15,15],
+        "ST": [25,26],
+        "NT": [49,49],
 
-        "CCH": [35,35,35,36,36,36,36,37,37,38,38,38,38,38,38,38,39,39,39,39,39,40,40,40,40,40,45,45,45,46,47,47,48,49,49,49,50,50],
-        "CWH": [50],
+        "CCH": [35,35],
+        "CWH": [50, 130],
 
-        "MD": [44,44,44,45,45,45,45,46,46,46,46,46,46,48],
+        "MD": [44,44],
 
-        "TSC": [50],
-        "AL": [59],
+        "TSC": [50, 130],
+        "AL": [59, 145],
 
-        "TDF": [52],
-        "TCM": [54],
-        "TDH": [58]
+        "TDF": [52, 130],
+        "TCM": [54, 130],
+        "TDH": [58, 145]
     }
 
     for key in list(fate_zones.keys()):
         level = fate_zones[key][0]
-        fate_list.append(create_FATE_location(1,key,level))
-        fate_list.append(create_FATE_location(2,key,level))
-        fate_list.append(create_FATE_location(3,key,level))
+        ilvl = fate_zones[key][1]
+        fate_list.append(create_FATE_location(1,key,level,ilvl))
+        fate_list.append(create_FATE_location(2,key,level,ilvl))
+        fate_list.append(create_FATE_location(3,key,level,ilvl))
         #fate_list.append(create_FATE_location(4,key,level))
         #fate_list.append(create_FATE_location(5,key,level))
         # Old code for level-range FATE locations
@@ -190,12 +202,12 @@ def create_FATE_location_range(number, key, low_lvl, high_lvl):
             "requires": "|10 Equip Levels:" + str(ceil(high_lvl/10)) + "|"
         }
 
-def create_FATE_location(number, key, lvl):
+def create_FATE_location(number, key, lvl, ilvl):
     return { 
             "name": short_long[key] + ": FATE #" + str(number),
             "region": short_long[key],
             "category": ["FATEs"], #, short_long[key]],
-            "requires": "|10 Equip Levels:" + str(ceil(lvl/10)) + "|"
+            "requires": "|10 Equip Levels:" + str(ceil(lvl/10)) + "| and |10 ILVL:" + str(ceil(ilvl/10)) + "|"
         }
 
 def calc_quantile(lst, q):

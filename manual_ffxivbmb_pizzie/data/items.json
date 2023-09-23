@@ -153,7 +153,13 @@
 	{
 		"name": "10 Equip Levels",
 		"category": ["Gear"],
-		"count":5,
+		"count":6,
+		"progression": true
+	},
+	{
+		"name": "10 ILVL",
+		"category": ["Gear"],
+		"count":27,
 		"progression": true
 	},
 	{

@@ -28,7 +28,7 @@ Manual_FFXIVBMB_Pizzie:
     party_size: solo
 
     # Difficulty of the duty content.
-    # [Normal]  Excludes any duty that would take over 30 minutes to complete with the specified party size.
+    # [Normal]  Excludes any duty that would take over 15 minutes to complete with the specified party size.
     # [Hard]    Includes the above duties, but excludes extreme/savage duties.
     # [Savage]  Every duty in the game is included in the location pool with respect to party size.
     duty_diff: normal
