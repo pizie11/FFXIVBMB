@@ -32,8 +32,8 @@ Diamondback,Buff,,,,progression
 Mighty Guard,Buff,,,,progression
 Sticky Tongue,Debuff,Physical,Blunt,,progression
 Toad Oil,Buff,,,,useful
-The Ram’s Voice,Damage,Magic,Ice,,progression
-The Dragon’s Voice,Damage,Magic,Lightning,,progression
+The Ram's Voice,Damage,Magic,Ice,,progression
+The Dragon's Voice,Damage,Magic,Lightning,,progression
 Missile,Utility,Magic,None,,progression
 1000 Needles,Cooldown,Physical,Piercing,,progression
 Ink Jet,Damage,Magic,None,,progression
@@ -59,7 +59,7 @@ Abyssal Transfixion,Damage,Physical,Piercing,,progression
 Chirp,Debuff,Magic,None,,useful
 Eerie Soundwave,Debuff,Magic,None,,progression
 Pom Cure,Heal,,,,progression
-Gobskin,Buff,Magic,None,,useful
+Gobskin,Buff,Magic,None,,progression
 Magic Hammer,Damage,Magic,None,,progression
 Avail,Final,,,,filler
 Frog Legs,Utility,Magic,None,,useful
@@ -67,7 +67,7 @@ Sonic Boom,Damage,Magic,Wind,,progression
 Whistle,Buff,,,,useful
 White Knight’s Tour,Damage,Magic,None,,progression
 Black Knight’s Tour,Damage,Magic,None,,progression
-Level 5 Death,Utility,Magic,None,,useful
+Level 5 Death,Utility,Magic,None,,progression
 Launcher,Utility,Magic,None,,useful
 Perpetual Ray,Damage,Magic,None,,progression
 Cactguard,Buff,,,,useful

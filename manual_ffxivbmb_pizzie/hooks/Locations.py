@@ -48,8 +48,10 @@ def generate_duty_list():
     for row in dutyreader:
         if row[0] != "" and row[0] != "Name" and row[0] != "ARR" and row[0] != "HW" and row[0] != "STB" and row[0] != "SHB":
             #print(', '.join(row))
+            print(str(ceil(int(row[2])/10)) + " "+ str(ceil(int(row[3])/10)))
             requires_str = "|10 Equip Levels:" + str(ceil(int(row[2])/10)) + "| and |10 ILVL:" + str(ceil(int(row[3])/10)) + "| and |" + row[4] + " Access:1|"
             requires_str += (" and |" + row[7] + "|") if  (row[7] != "") else ""
+            print(requires_str)
             #print(row[0]+": " + row[5] + "-" + row[6])
             duty_list.append(
                 {
@@ -162,8 +164,8 @@ def before_location_table_processed(location_table: list) -> list:
         fate_list.append(create_FATE_location(1,key,level,ilvl))
         fate_list.append(create_FATE_location(2,key,level,ilvl))
         fate_list.append(create_FATE_location(3,key,level,ilvl))
-        #fate_list.append(create_FATE_location(4,key,level))
-        #fate_list.append(create_FATE_location(5,key,level))
+        #fate_list.append(create_FATE_location(4,key,level,ilvl))
+        #fate_list.append(create_FATE_location(5,key,level,ilvl))
         # Old code for level-range FATE locations
         # arr = fate_zones[key]
         # lowest = arr[0]
