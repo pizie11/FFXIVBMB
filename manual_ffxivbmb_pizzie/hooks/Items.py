@@ -28,7 +28,7 @@ spell_items = generate_spell_list()
 # if you need access to the items after processing to add ids, etc., you should use the hooks in World.py
 def before_item_table_processed(item_table: list) -> list:
     
-    item_table.extend(spell_items)
+    #item_table.extend(spell_items)
 
     return item_table
 

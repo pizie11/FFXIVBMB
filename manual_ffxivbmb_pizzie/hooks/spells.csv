@@ -17,7 +17,7 @@ Level 5 Petrify,Debuff,Magic,None,,useful
 Sharpened Knife,Damage,Physical,Slashing,,progression
 Ice Spikes,DoT,Magic,Ice,,progression
 Blood Drain,Utility,Magic,None,,useful
-Acorn Bomb,Debuff,Magic,None,,useful
+Acorn Bomb,Debuff,Magic,None,,progression
 Bomb Toss,Damage,Magic,Fire,,progression
 Off-guard,Debuff,Magic,None,,progression
 Self-destruct,Final,Magic,Fire,,filler
@@ -27,7 +27,7 @@ Flying Sardine,Debuff,Physical,Piercing,,progression
 Snort,Utility,Magic,Wind,,progression
 4-tonze Weight,Damage,Physical,Blunt,,progression
 The Look,Damage,Magic,None,,progression
-Bad Breath,Debuff,Magic,None,,useful
+Bad Breath,Debuff,Magic,None,,progression
 Diamondback,Buff,,,,progression
 Mighty Guard,Buff,,,,progression
 Sticky Tongue,Debuff,Physical,Blunt,,progression
@@ -48,7 +48,7 @@ Eruption,Cooldown,Magic,Fire,,useful
 Mountain Buster,Cooldown,Physical,Blunt,Earth,useful
 Shock Strike,Cooldown,Magic,Lightning,,useful
 Glass Dance,Cooldown,Magic,Ice,,useful
-Veil of the Whorl,Cooldown,Magic,Water,,useful
+Veil of the Whorl,Cooldown,Magic,Water,,progression
 HW,,,,,
 Alpine Draft,Damage,Magic,Wind,,progression
 Protean Wave,Damage,Magic,Water,,progression
