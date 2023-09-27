@@ -45,25 +45,54 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
             # Remove Alliance
             if party_size < 3 and location["party"] == "Alliance":
                 locations_to_remove.append(location)
+                continue
             # Remove Full Party
             if party_size < 2 and location["party"] == "Full Party":
                 locations_to_remove.append(location)
+                continue
             # Remove Light Party
             if party_size < 1 and location["party"] == "Light Party":
                 locations_to_remove.append(location)
+                continue
         # Based on difficulty
         if "diff" in location:
             # Remove Savage
             if party_size < 2 and location["diff"] == "Savage":
                 locations_to_remove.append(location)
+                continue
             # Remove Hard
             if party_size < 1 and location["diff"] == "Hard":
                 locations_to_remove.append(location)
+                continue
         # remove main scenario
         if location["name"] == "Castrum Meridianum" or location["name"] == "The Praetorium" or location["name"] == "The Porta Decumana":
             locations_to_remove.append(location)
+            continue
 
-    world.location_table = [i for i in world.location_table if i not in locations_to_remove]
+    #world.location_table = [i for i in world.location_table if i not in locations_to_remove]
+
+    print(world.location_name_to_location)
+
+    for location in locations_to_remove:
+        location_table.remove(location)
+        world.location_name_to_location.pop(location["name"])
+        temp =  world.location_name_to_id.pop(location["name"])
+        del world.location_id_to_name[temp]
+#Urth's Fount
+#Urth's Fount
+    #world.location_table = [i for i in world.location_table if i not in locations_to_remove]
+
+    # world.location_id_to_name = {}
+    # world.location_name_to_location = {}
+    # world.location_name_to_id = {}
+
+    # for item in world.location_table:
+    #     world.location_id_to_name[item["id"]] = item["name"]
+    #     world.location_name_to_location[item["name"]] = item
+
+    # world.location_name_to_id = {name: id for id, name in world.location_id_to_name.items()}
+
+    # print(world.location_id_to_name)
 
     
 
