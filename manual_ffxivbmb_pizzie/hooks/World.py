@@ -71,7 +71,7 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 
     #world.location_table = [i for i in world.location_table if i not in locations_to_remove]
 
-    print(world.location_name_to_location)
+    #print(world.location_name_to_location)
 
     for location in locations_to_remove:
         location_table.remove(location)

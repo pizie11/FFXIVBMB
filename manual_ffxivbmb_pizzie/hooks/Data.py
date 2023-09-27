@@ -37,8 +37,44 @@ short_long = {
     "TDH": "The Dravanian Hinterlands"
 }
 
-mag_spells = "(|#1 Water Cannon| or |#2 Flame Thrower| or |#3 Aqua Breath| or |#6 High Voltage| or |#10 Glower| or |#11 Plaincracker| or |#19 Bomb Toss| or |#33 The Ram's Voice| or |#34 The Dragon's Voice| or |#37 Ink Jet| or |#41 Mind Blast|)"
-phys_spells = "(|#4 Flying Frenzy| or |#5 Drill Cannons| or |#15 Sharpened Knife| or |#26 4-tonze Weight| or |#38 Fire Angon|)"
+mag_spells = "("
+phys_spells = "("
+
+def generate_spell_list():
+    spell_list = []
+
+    global mag_spells
+    global phys_spells
+
+    spellreader = csv.reader(pkgutil.get_data(__name__, "spells.csv").decode().splitlines(), delimiter=',', quotechar='|')
+    count = 1
+    for row in spellreader:
+        if row[0] != "" and row[0] != "Name" and row[0] != "ARR" and row[0] != "HW" and row[0] != "STB" and row[0] != "SHB":
+            #print("#" + str(count) + " " + row[0])
+            spell_list.append(
+                {
+                    "name": "#" + str(count) + " " + row[0],
+                    "category": [row[1]],
+                    "count": 1,
+                    row[5]: True
+                }
+            )
+        
+            if row[1] == "Damage" and row[2] == "Magic":
+                mag_spells += "|#" + str(count) + " " + row[0] + "| or "
+            if row[1] == "Damage" and row[2] == "Physical": 
+                phys_spells += "|#" + str(count) + " " + row[0] + "| or "
+        
+            count += 1
+
+    mag_spells = mag_spells[:-4] +")"
+    phys_spells = phys_spells[:-4] +")"
+
+    return spell_list
+
+spell_items = generate_spell_list()
+print(mag_spells)
+print(phys_spells)
 
 def generate_duty_list():
     duty_list = []
@@ -79,27 +115,6 @@ def generate_duty_list():
 
 duty_locations = generate_duty_list()
 
-def generate_spell_list():
-    spell_list = []
-
-    spellreader = csv.reader(pkgutil.get_data(__name__, "spells.csv").decode().splitlines(), delimiter=',', quotechar='|')
-    count = 1
-    for row in spellreader:
-        if row[0] != "" and row[0] != "Name" and row[0] != "ARR" and row[0] != "HW" and row[0] != "STB" and row[0] != "SHB":
-            print("#" + str(count) + " " + row[0])
-            spell_list.append(
-                {
-                    "name": "#" + str(count) + " " + row[0],
-                    "category": [row[1]],
-                    "count": 1,
-                    row[5]: True
-                }
-            )
-            count += 1
-    return spell_list
-
-spell_items = generate_spell_list()
-
 # called after the items.json file has been loaded, before any item loading or processing has occurred
 # if you need access to the items after processing to add ids, etc., you should use the hooks in World.py
 def after_load_item_file(item_table: list) -> list:
@@ -131,7 +146,7 @@ def after_load_location_file(location_table: list) -> list:
     mc_list[13]['requires'] = "|#7 Loom| or |#29 Diamondback|  and |Spell Slot:2|" #MC #14
     mc_list[14]['requires'] = "|#18 Acorn Bomb| and |Spell Slot:2|" #MC 15
     mc_list[15]['requires'] = "|#7 Loom| or |#29 Diamondback| and |Spell Slot:2|" #MC #16
-    mc_list[18]['requires'] = phys_spells + "and |#37 Ink Jet| and |Spell Slot:3|" #MC #19
+    mc_list[18]['requires'] = phys_spells + " and |#37 Ink Jet| and |Spell Slot:3|" #MC #19
     mc_list[19]['requires'] = "|#29 Diamondback| and |Spell Slot:2|" #MC #20
     mc_list[20]['requires'] = "|#7 Loom| or |#29 Diamondback| and |Spell Slot:2|" #MC #21
     mc_list[21]['requires'] = "|#7 Loom| or |#29 Diamondback| and |Spell Slot:2|" #MC #22
