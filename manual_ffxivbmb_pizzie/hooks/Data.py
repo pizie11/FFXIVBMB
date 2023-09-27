@@ -73,8 +73,8 @@ def generate_spell_list():
     return spell_list
 
 spell_items = generate_spell_list()
-print(mag_spells)
-print(phys_spells)
+#print(mag_spells)
+#print(phys_spells)
 
 def generate_duty_list():
     duty_list = []
@@ -100,15 +100,6 @@ def generate_duty_list():
                     "diff" : row[6],
                 }
             )
-
-    # # Take out 15 50 duties at random
-    # remove_50 = 15
-    # # Take out 10 60 duties at random
-    # remove_60 = 10
-    # for duty in duty_list:
-    #     if duty['level'] == 50:
-
-
 
     return duty_list
     
@@ -212,28 +203,6 @@ def after_load_location_file(location_table: list) -> list:
         fate_list.append(create_FATE_location(3,key,level,ilvl))
         #fate_list.append(create_FATE_location(4,key,level,ilvl))
         #fate_list.append(create_FATE_location(5,key,level,ilvl))
-        # Old code for level-range FATE locations
-        # arr = fate_zones[key]
-        # lowest = arr[0]
-        # midlow = int(calc_quantile(arr, 0.20))
-        # mid = int(calc_quantile(arr, 0.40))
-        # midtad = int(calc_quantile(arr, 0.60))
-        # midhigh = int(calc_quantile(arr, 0.80))
-        # # midlow = int(calc_quantile(arr, 0.25))
-        # # mid = int(calc_quantile(arr, 0.50))
-        # # midhigh = int(calc_quantile(arr, 0.75))
-        # highest = arr[-1]
-        # #Add low 
-        # fate_list.append(create_FATE_location_range(1, key, lowest, midlow))
-        # #Add mid-low 
-        # fate_list.append(create_FATE_location_range(2, key, midlow, mid))
-        # #Add mid
-        # # fate_list.append(create_FATE_location(3, key, mid, midhigh))
-        # fate_list.append(create_FATE_location_range(3, key, mid, midtad))
-        # #Add midtad
-        # fate_list.append(create_FATE_location_range(4, key, midtad, midhigh))
-        # #add midhigh
-        # fate_list.append(create_FATE_location_range(5, key, midhigh, highest))
 
     location_table.extend(fate_list)
 
