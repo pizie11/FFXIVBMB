@@ -8,6 +8,10 @@
             "random": 1
         },
         {
+            "items": ["10 ILVL"],
+            "random": 11
+        },
+        {
             "items": ["Spell Slot"],
             "random": 1
         },
