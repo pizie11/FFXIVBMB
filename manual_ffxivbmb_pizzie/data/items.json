@@ -163,12 +163,6 @@
 		"progression": true
 	},
 	{
-		"name": "10 ILVL",
-		"category": ["Gear"],
-		"count":27,
-		"progression": true
-	},
-	{
 		"name": "Spell Slot",
 		"category": ["Gear"],
 		"count":24,
