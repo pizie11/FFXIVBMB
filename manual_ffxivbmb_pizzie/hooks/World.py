@@ -69,7 +69,6 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
             locations_to_remove.append(location)
             continue
 
-    #world.location_table = [i for i in world.location_table if i not in locations_to_remove]
 
     #print(world.location_name_to_location)
 
@@ -78,23 +77,6 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
         world.location_name_to_location.pop(location["name"])
         temp =  world.location_name_to_id.pop(location["name"])
         del world.location_id_to_name[temp]
-#Urth's Fount
-#Urth's Fount
-    #world.location_table = [i for i in world.location_table if i not in locations_to_remove]
-
-    # world.location_id_to_name = {}
-    # world.location_name_to_location = {}
-    # world.location_name_to_id = {}
-
-    # for item in world.location_table:
-    #     world.location_id_to_name[item["id"]] = item["name"]
-    #     world.location_name_to_location[item["name"]] = item
-
-    # world.location_name_to_id = {name: id for id, name in world.location_id_to_name.items()}
-
-    # print(world.location_id_to_name)
-
-    
 
 
 # Called after regions and locations are created, in case you want to see or modify that information.
@@ -122,45 +104,6 @@ def after_set_rules(world: World, multiworld: MultiWorld, player: int):
 
 # The complete item pool prior to being set for generation is provided here, in case you want to make changes to it
 def before_generate_basic(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
-
-
-    # import random
-
-    # total_characters = get_option_value(multiworld, player, "total_characters_to_win_with") or 50
-
-    # if total_characters < 10 or total_characters > 50:
-    #     total_characters = 50
-
-    # # shuffle the character item names and pull a subset with a maximum for the option we provided
-    # character_names = [name for name in world.item_names]
-    # random.shuffle(character_names)
-    # character_names = character_names[0:total_characters]
-
-    # # remove any items that have been added that don't have those item names
-    # item_pool = [item for item in item_pool if item.name in character_names]
-    
-    # # remove any locations that have been added that aren't for those items
-    # world.location_id_to_name = {id: name for (id, name) in world.location_id_to_name.items() if name.replace("Beat the Game - ", "") in character_names}
-    # world.location_name_to_id = {name: id for (id, name) in world.location_id_to_name.items()}
-    # world.location_names = world.location_name_to_id.keys()
-
-    # # remove the locations above from the multiworld as well
-    # multiworld.clear_location_cache()
-    
-    # for region in multiworld.regions:
-    #     locations_to_remove_from_region = []
-
-    #     for location in region.locations:
-    #         if location.name.replace("Beat the Game - ", "") not in character_names and location.player == player:
-    #             locations_to_remove_from_region.append(location)
-
-    #     for location in locations_to_remove_from_region:
-    #         region.locations.remove(location)
-                
-    # # modify the victory requirements to only include items that are in the item names list
-    # victory_location = multiworld.get_location("__Manual Game Complete__", player)
-    # victory_location.access_rule = lambda state, items=character_names, p=player: state.has_all(items, p)
-
     return item_pool
 
 # This method is run at the very end of pre-generation, once the place_item options have been handled and before AP generation occurs

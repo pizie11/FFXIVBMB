@@ -34,7 +34,15 @@ short_long = {
 
     "TDF": "The Dravanian Forelands",
     "TCM": "The Churning Mists",
-    "TDH": "The Dravanian Hinterlands"
+    "TDH": "The Dravanian Hinterlands",
+
+    "TF": "The Fringes",
+    "TP": "The Peaks",
+    "TL": "The Lochs",
+
+    "TRS": "The Ruby Sea",
+    "Y": "Yanxia",
+    "TAS": "The Azim Steppe",
 }
 
 mag_spells = "("
@@ -122,7 +130,7 @@ def after_load_progressive_item_file(progressive_item_table: list) -> list:
 def after_load_location_file(location_table: list) -> list:
         # add Masked Carnivale locations
     mc_list = []
-    for i in range(1,30):
+    for i in range(1,31):
         mc_list.append({ 
             "name": "Masked Carnivale #" + str(i),
             "region": "Masked Carnivale",
@@ -149,13 +157,14 @@ def after_load_location_file(location_table: list) -> list:
     mc_list[26]['requires'] = "|10 Equip Levels:6| and |#1 Water Cannon| and (|#31 Sticky Tongue| or |#25 Snort| or |#51 Protean Wave|) and |Spell Slot:3|" #MC 27
     mc_list[27]['requires'] = "|10 Equip Levels:6| and |#38 Fire Angon| and |Spell Slot:2|" #MC 28
     mc_list[28]['requires'] = "|10 Equip Levels:6| and |#24 Flying Sardine| and |#53 Electrogenesis| and |#29 Diamondback| and |Spell Slot:4|" #MC 29
+    mc_list[29]['requires'] = "|10 Equip Levels:6| and |#73 Exuviation| and |#55 Abyssal Transfixion| and |Spell Slot:3|" #MC 30
 
     #Final Challenge
     mc_list.append({
-        "name": "Masked Carnivale #30",
+        "name": "Masked Carnivale #31",
         "region": "Masked Carnivale",
         "category": ["Masked Carnivale"],
-        "requires": "|10 Equip Levels:6| and |#73 Exuviation| and |#55 Abyssal Transfixion| and |Spell Slot:3|",
+        "requires": "|10 Equip Levels:7| and |#24 Flying Sardine| and |#57 Eerie Soundwave| and |#73 Exuviation| and |#29 Diamondback| and |Spell Slot:6|",
         "victory": True
     })
 
@@ -192,7 +201,15 @@ def after_load_location_file(location_table: list) -> list:
 
         "TDF": [52, 130],
         "TCM": [54, 130],
-        "TDH": [58, 145]
+        "TDH": [58, 145],
+
+        "TF": [60,0],
+        "TP": [60,0],
+        "TL": [69,0],
+
+        "TRS": [62],
+        "Y": [64],
+        "TAS": [65],
     }
 
     for key in list(fate_zones.keys()):

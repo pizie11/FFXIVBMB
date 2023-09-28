@@ -145,21 +145,57 @@
 		"progression": true
 	},
 	{
-		"name": "#91 Basic Instinct",
-		"category": ["Buff"],
+		"name": "Rhalgr's Reach Access",
+		"category": ["Location"],
 		"count":1,
 		"progression": true
 	},
 	{
-		"name": "#92 Ultravibration",
-		"category": ["Utility"],
+		"name": "The Fringes Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Peaks Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Lochs Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Kugane Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Ruby Sea Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Yanxia Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Azim Steppe Access",
+		"category": ["Location"],
 		"count":1,
 		"progression": true
 	},
 	{
 		"name": "10 Equip Levels",
 		"category": ["Gear"],
-		"count":6,
+		"count":7,
 		"progression": true
 	},
 	{

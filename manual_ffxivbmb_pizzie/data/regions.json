@@ -7,7 +7,8 @@
 			"Middle La Noscea",
 			"Western La Noscea",
 			"Eastern La Noscea",
-			"Ishgard"
+			"Ishgard",
+			"Kugane"
 		],
 		"starting": true
 	},
@@ -92,7 +93,8 @@
 		"connects_to": [
 			"South Shroud",
 			"Central Shroud",
-			"Gridania"
+			"Gridania",
+			"The Fringes"
 		]
 	},
 	"South Shroud": 
@@ -252,6 +254,73 @@
 		"requires": "|Azys Lla Access:1|",
 		"connects_to:": [
 			"Ishgard"
+		]
+	},
+
+	"Rhalgr's Reach":
+	{
+		"requires": "|Rhalgr's Reach Access: 1|",
+		"connects_to":[
+			"The Fringes",
+			"The Peaks"
+		]
+	},
+	"The Fringes":
+	{
+		"requires": "|The Fringes Access: 1|",
+		"connects_to": [
+			"East Shroud",
+			"Rhalgr's Reach",
+			"The Peaks"
+		]
+	},
+	"The Peaks":
+	{
+		"requires": "|The Peaks Access: 1|",
+		"connects_to": [
+			"Rhalgr's Reach",
+			"The Fringes",
+			"The Lochs"
+		]
+	},
+	"The Lochs":
+	{
+		"requires": "|The Lochs Access: 1|",
+		"connects_to": [
+			"The Peaks"
+		]
+	},
+	"Kugane":
+	{
+		"requires": "|Kugane Access: 1|",
+		"connects_to": [
+			"Limsa Lominsa",
+			"The Ruby Sea"
+		]
+	},
+	"The Ruby Sea":
+	{
+		"requires": "|The Ruby Sea Access: 1|",
+		"connects_to": [
+			"Kugane",
+			"Yanxia",
+			"The Azim Steppe"
+		]
+	},
+	"Yanxia":
+	{
+		"requires": "|Yanxia Access: 1|",
+		"connects_to": [
+			"The Ruby Sea",
+			"The Azim Steppe"
+		]
+	},
+	"The Azim Steppe":
+	{
+		"requires": "|The Azim Steppe Access: 1|",
+		"connects_to": [
+			"The Ruby Sea",
+			"Yanxia"
 		]
 	},
 	"Solo Duty": {
