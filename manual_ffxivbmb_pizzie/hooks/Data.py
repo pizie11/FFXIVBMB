@@ -43,6 +43,13 @@ short_long = {
     "TRS": "The Ruby Sea",
     "Y": "Yanxia",
     "TAS": "The Azim Steppe",
+
+    "L": "Lakeland",
+    "K": "Kholusia",
+    "IM": "Il Mheg",
+    "AA": "Amh Araeng",
+    "TRG": "The Rak'tika Greatwood",
+    "TT": "The Tempest"
 }
 
 mag_spells = "("
@@ -130,7 +137,7 @@ def after_load_progressive_item_file(progressive_item_table: list) -> list:
 def after_load_location_file(location_table: list) -> list:
         # add Masked Carnivale locations
     mc_list = []
-    for i in range(1,31):
+    for i in range(1,32):
         mc_list.append({ 
             "name": "Masked Carnivale #" + str(i),
             "region": "Masked Carnivale",
@@ -159,12 +166,13 @@ def after_load_location_file(location_table: list) -> list:
     mc_list[28]['requires'] = "|10 Equip Levels:6| and |#24 Flying Sardine| and |#53 Electrogenesis| and |#29 Diamondback| and |Spell Slot:4|" #MC 29
     mc_list[29]['requires'] = "|10 Equip Levels:6| and |#73 Exuviation| and |#55 Abyssal Transfixion| and |Spell Slot:3|" #MC 30
 
+    mc_list[30]['requires'] = "|10 Equip Levels:7| and |#24 Flying Sardine| and |#57 Eerie Soundwave| and |#73 Exuviation| and |#29 Diamondback| and |Spell Slot:6|" #MC 31
     #Final Challenge
     mc_list.append({
-        "name": "Masked Carnivale #31",
+        "name": "Masked Carnivale #32",
         "region": "Masked Carnivale",
         "category": ["Masked Carnivale"],
-        "requires": "|10 Equip Levels:7| and |#24 Flying Sardine| and |#57 Eerie Soundwave| and |#73 Exuviation| and |#29 Diamondback| and |Spell Slot:6|",
+        "requires": "|10 Equip Levels:8| and |#73 Exuviation| and |#29 Diamondback| and |#30 Mighty Guard| and |#33 The Ram's Voice| and |#92 Ultravibration| and |#24 Flying Sardine| and |#7 Loom| and " + phys_spells + " and |Spell Slot:8|",
         "victory": True
     })
 
@@ -210,6 +218,13 @@ def after_load_location_file(location_table: list) -> list:
         "TRS": [62],
         "Y": [64],
         "TAS": [65],
+
+        "L": [70],
+        "K": [70],
+        "IM": [72],
+        "AA": [76],
+        "TRG": [74],
+        "TT": [79]
     }
 
     for key in list(fate_zones.keys()):

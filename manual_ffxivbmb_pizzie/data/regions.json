@@ -323,6 +323,73 @@
 			"Yanxia"
 		]
 	},
+	"The Crystarium":
+	{
+		"requires": "|The Crystarium Access: 1|",
+		"connects_to": [
+			"Mor Dhona",
+			"Lakeland",
+			"Amh Araeng",
+			"Kholusia",
+			"Eulmore"
+		]
+	},
+	"Lakeland":
+	{
+		"requires": "|Lakeland Access: 1|",
+		"connects_to": [
+			"Il Mheg",
+			"Amh Araeng",
+			"The Crystarium",
+			"The Rak'tika Greatwood"
+		]
+	},
+	"Kholusia":
+	{
+		"requires": "|Kholusia Access: 1|",
+		"connects_to": [
+			"The Tempest",
+			"Eulmore",
+			"The Crystarium"
+		]
+	},
+	"Amh Araeng":
+	{
+		"requires": "|Amh Araeng Access: 1|",
+		"connects_to": [
+			"Lakeland",
+			"The Crystarium"
+		]
+	},
+	"Il Mheg":
+	{
+		"requires": "|Il Mheg Access: 1|",
+		"connects_to": [
+			"Lakeland"
+		]
+	},
+	"The Rak'tika Greatwood":
+	{
+		"requires": "|The Rak'tika Greatwood Access: 1|",
+		"connects_to": [
+			"Lakeland"
+		]
+	},
+	"Eulmore":
+	{
+		"requires": "|Eulmore Access: 1|",
+		"connects_to": [
+			"Kholusia",
+			"The Crystarium"
+		]
+	},
+	"The Tempest":
+	{
+		"requires": "|The Tempest Access: 1|",
+		"connects_to": [
+			"Kholusia"
+		]
+	},
 	"Solo Duty": {
 		"starting": true,
 		"requires": "|#91 Basic Instinct| and |#30 Mighty Guard| and |#77 Aetheric Mimicry| and |#58 Pom Cure| and |#33 The Ram's Voice| and |#92 Ultravibration| and |#59 Gobskin| and |Spell Slot:8|"

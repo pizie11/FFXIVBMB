@@ -193,9 +193,81 @@
 		"progression": true
 	},
 	{
+		"name": "The Crystarium Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Lakeland Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Kholusia Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Eulmore Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Amh Araeng Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Il Mheg Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Rak'tika Greatwood Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Tempest Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Bahamut Key",
+		"category": ["Raid Key"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Alexander Key",
+		"category": ["Raid Key"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Omega Key",
+		"category": ["Raid Key"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Eden Key",
+		"category": ["Raid Key"],
+		"count":1,
+		"progression": true
+	},
+	{
 		"name": "10 Equip Levels",
 		"category": ["Gear"],
-		"count":7,
+		"count":8,
 		"progression": true
 	},
 	{
