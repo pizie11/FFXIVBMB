@@ -31,11 +31,12 @@ from ..Helpers import is_option_enabled, get_option_value
 
 # Called before regions and locations are created. Not clear why you'd want this, but it's here.
 def before_create_regions(world: World, multiworld: MultiWorld, player: int):
-    party_size = get_option_value(multiworld, player, "party_size") or 0
+    party_size = get_option_value(multiworld, player, "party_size") or 0  # type: int
     duty_diff = get_option_value(multiworld, player, "duty_diff") or 0
     expac_goal = get_option_value(multiworld, player, "expac_goal") or 0
     main_duties = get_option_value(multiworld, player, "main_duties") or 0
-    
+    require_basic_instinct = get_option_value(multiworld, player, "require_basic_instinct") or 0
+
     locations_to_remove = []
     # Remove locations based on options
     for location in world.location_table:
@@ -69,6 +70,9 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
             locations_to_remove.append(location)
             continue
 
+        # Require Basic Instinct when running full party content solo
+        if require_basic_instinct and party_size < 1 and "Masked Carnivale" not in location.get("category", []) and "FATEs" not in location.get("category", []):
+            location["requires"] += " and |#91 Basic Instinct|"
 
     #print(world.location_name_to_location)
 
@@ -91,8 +95,6 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
     #             region["requires"] = "|#77 Aetherial Mimicry| and |#58 Pom Cure| and |Spell Slot:2|"
 
 
-    
-    
 
 # Called before rules for accessing regions and locations are created. Not clear why you'd want this, but it's here.
 def before_set_rules(world: World, multiworld: MultiWorld, player: int):

@@ -7,7 +7,7 @@ from ..Helpers import is_option_enabled, get_option_value
 
 
 ####################################################################
-# NOTE: At the time that options are created, Manual has no concept of the multiworld or its own world. 
+# NOTE: At the time that options are created, Manual has no concept of the multiworld or its own world.
 #       Options are defined before the world is even created.
 #
 # Example of creating your own option:
@@ -81,6 +81,14 @@ class IncludeMainScenario(Choice):
     option_include = 1
 
 
+class RequireBasicInstinct(Toggle):
+    """
+    If enabled, Dungeons/Trials/Raids are not in logic without #91 Basic Instinct
+
+    Note: This setting does nothing if party_size is not set to Solo
+    """
+    display_name = "Require #91 Basic Instinct for relevant content"
+
 class GearMode(Choice):
     """
     [Auto] Override any gear/level settings to instead automatically choose splits and increments, these will match the content selection as close as it can
@@ -97,9 +105,10 @@ def before_options_defined(options: dict) -> dict:
     options["duty_diff"] = DutyDifficulty
     options["expac_goal"] = ExpansionGoal
     options["main_duties"] = IncludeMainScenario
+    options["require_basic_instinct"] = RequireBasicInstinct
 
     options["gear_mode"] = GearMode
-    
+
     return options
 
 # This is called after any manual options are defined, in case you want to see what options are defined or want to modify the defined options
