@@ -3,13 +3,13 @@
  
 An archipelago manual randomizer for FFXIV focused on entirely blue mage
 
-### Goal: Complete Masked Carnivale #30
+### Goal: Complete Masked Carnivale #32
 
 ### Needed to play:
 * FFXIV
-* BLU levelled to at least 60
-* Every (Few exceptions) ARR and HW BLU spell unlocked
-* Some gil/tomes for gearing
+* BLU levelled to at least 80
+* Every BLU spell unlocked
+* Some spare gil/tomes for gearing
 
 ### Location checks:
 * Completing a synced FATE in a certain zone of a particular level range
@@ -20,7 +20,6 @@ An archipelago manual randomizer for FFXIV focused on entirely blue mage
 * 1 damage potency spell
 * 1 spell slot
 * 1 10x Equip Level
-* 11 10x ILV
 * 1 area/city access
 
 ### Rules:
