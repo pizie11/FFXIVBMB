@@ -185,6 +185,11 @@ def after_create_item(item: ManualItem, world: World, multiworld: MultiWorld, pl
 
 # This is called before slot data is set and provides an empty dict ({}), in case you want to modify it before Manual does
 def before_fill_slot_data(slot_data: dict, world: World, multiworld: MultiWorld, player: int) -> dict:
+    slot_data["party_size"] = get_option_value(multiworld, player, "party_size") or 0
+    slot_data["duty_diff"] = get_option_value(multiworld, player, "duty_diff") or 0
+    slot_data["expac_goal"] = get_option_value(multiworld, player, "expac_goal") or 0
+    slot_data["main_duties"] = get_option_value(multiworld, player, "main_duties") or 0
+
     return slot_data
 
 # This is called after slot data is set and provides the slot data at the time, in case you want to check and modify it after Manual is done with it
