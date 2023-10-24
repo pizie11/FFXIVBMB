@@ -35,11 +35,11 @@ Manual_FFXIVBMB_Pizzie:
 
     # Determines the goal and what expansion content will be put in.
     # Certain QoL spells for completing duties will still be included regardless of choice.
-    # [ARR]  MC #25 is the goal, all level 1-50 content is included.
+    # (NOT IMPLEMENTED)[ARR]  MC #25 is the goal, all level 1-50 content is included.
     # (NOT IMPLEMENTED)[HW]   MC #30 is the goal, all level 1-60 content is included. 
     # (NOT IMPLEMENTED)[StB]  MC #31 is the goal, all level 1-70 content is included.
-    # (NOT IMPLEMENTED)[Shb]  MC #32 is the goal, all level 1-80 content is included.
-    expac_goal: arr
+    # [Shb]  MC #32 is the goal, all level 1-80 content is included.
+    expac_goal: shb
     
     # [Exclude] Excludes the three Main Scenario duties.
     # [Include] Includes the three duties.

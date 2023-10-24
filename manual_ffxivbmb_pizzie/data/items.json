@@ -145,27 +145,129 @@
 		"progression": true
 	},
 	{
-		"name": "#91 Basic Instinct",
-		"category": ["Buff"],
+		"name": "Rhalgr's Reach Access",
+		"category": ["Location"],
 		"count":1,
 		"progression": true
 	},
 	{
-		"name": "#92 Ultravibration",
-		"category": ["Utility"],
+		"name": "The Fringes Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Peaks Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Lochs Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Kugane Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Ruby Sea Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Yanxia Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Azim Steppe Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Crystarium Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Lakeland Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Kholusia Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Eulmore Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Amh Araeng Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Il Mheg Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Rak'tika Greatwood Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "The Tempest Access",
+		"category": ["Location"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Bahamut Key",
+		"category": ["Raid Key"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Alexander Key",
+		"category": ["Raid Key"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Omega Key",
+		"category": ["Raid Key"],
+		"count":1,
+		"progression": true
+	},
+	{
+		"name": "Eden Key",
+		"category": ["Raid Key"],
 		"count":1,
 		"progression": true
 	},
 	{
 		"name": "10 Equip Levels",
 		"category": ["Gear"],
-		"count":6,
-		"progression": true
-	},
-	{
-		"name": "10 ILVL",
-		"category": ["Gear"],
-		"count":27,
+		"count":8,
 		"progression": true
 	},
 	{

@@ -6,7 +6,7 @@ Copperbell Mines,Dungeon (ARR),20,20,Western Thanalan,Solo,Normal,
 Halatali,Dungeon (ARR),23,23,Eastern Thanalan,Solo,Normal,
 The Thousand Maws of Toto-Rak,Dungeon (ARR),27,27,South Shroud,Solo,Normal,
 Haukke Manor,Dungeon (ARR),31,31,Gridania and Central Shroud,Solo,Normal,
-Brayflox’s Longstop,Dungeon (ARR),34,34,Eastern La Noscea,Solo,Normal,
+Brayflox's Longstop,Dungeon (ARR),34,34,Eastern La Noscea,Solo,Normal,
 The Sunken Temple of Qarn ,Dungeon (ARR),37,37,Southern Thanalan,Solo,Normal,
 Cutter's Cry,Dungeon (ARR),40,40,Ul'dah and Central Thanalan,Solo,Normal,
 The Stone Vigil,Dungeon (ARR),43,43,Coerthas Central Highlands,Solo,Normal,
@@ -60,23 +60,23 @@ The Whorleater (Extreme),Trial (ARR),50,130,Lower La Noscea,Full Party,Savage,
 The Striking Tree (Extreme),Trial (ARR),50,130,East Shroud,Full Party,Savage,
 The Akh Afah Amphitheatre (Extreme),Trial (ARR),50,130,Coerthas Central Highlands,Full Party,Savage,
 ,,,,,,,
-The Binding Coil of Bahamut - Turn 1,Normal Raid (ARR),50,130,Eastern La Noscea,Solo,Hard,
-The Binding Coil of Bahamut - Turn 2,Normal Raid (ARR),50,130,Eastern La Noscea,Solo,Hard,
-The Binding Coil of Bahamut - Turn 3,Normal Raid (ARR),50,130,Eastern La Noscea,Full Party,Savage,
-The Binding Coil of Bahamut - Turn 4,Normal Raid (ARR),50,130,Eastern La Noscea,Full Party,Savage,
-The Binding Coil of Bahamut - Turn 5,Normal Raid (ARR),50,130,Eastern La Noscea,Full Party,Savage,
-The Second Coil of Bahamut - Turn 1,Normal Raid (ARR),50,130,North Shroud,Full Party,Savage,
-The Second Coil of Bahamut - Turn 2,Normal Raid (ARR),50,130,North Shroud,Full Party,Savage,
-The Second Coil of Bahamut - Turn 3,Normal Raid (ARR),50,130,North Shroud,Full Party,Savage,
-The Second Coil of Bahamut - Turn 4,Normal Raid (ARR),50,130,North Shroud,Full Party,Savage,
-The Second Coil of Bahamut - Turn 1 (Savage),Savage Raid (ARR),50,130,North Shroud,Full Party,Savage,
-The Second Coil of Bahamut - Turn 2 (Savage),Savage Raid (ARR),50,130,North Shroud,Full Party,Savage,
-The Second Coil of Bahamut - Turn 3 (Savage),Savage Raid (ARR),50,130,North Shroud,Full Party,Savage,
-The Second Coil of Bahamut - Turn 4 (Savage),Savage Raid (ARR),50,130,North Shroud,Full Party,Savage,
-The Final Coil of Bahamut - Turn 1,Normal Raid (ARR),50,130,Northern Thanalan,Full Party,Savage,
-The Final Coil of Bahamut - Turn 2,Normal Raid (ARR),50,130,Northern Thanalan,Full Party,Savage,
-The Final Coil of Bahamut - Turn 3,Normal Raid (ARR),50,130,Northern Thanalan,Full Party,Savage,
-The Final Coil of Bahamut - Turn 4,Normal Raid (ARR),50,130,Northern Thanalan,Full Party,Savage,
+The Binding Coil of Bahamut - Turn 1,Normal Raid (ARR),50,130,Eastern La Noscea,Solo,Hard,Bahamut Key
+The Binding Coil of Bahamut - Turn 2,Normal Raid (ARR),50,130,Eastern La Noscea,Solo,Hard,Bahamut Key
+The Binding Coil of Bahamut - Turn 3,Normal Raid (ARR),50,130,Eastern La Noscea,Full Party,Savage,Bahamut Key
+The Binding Coil of Bahamut - Turn 4,Normal Raid (ARR),50,130,Eastern La Noscea,Full Party,Savage,Bahamut Key
+The Binding Coil of Bahamut - Turn 5,Normal Raid (ARR),50,130,Eastern La Noscea,Full Party,Savage,Bahamut Key
+The Second Coil of Bahamut - Turn 1,Normal Raid (ARR),50,130,North Shroud,Full Party,Savage,Bahamut Key
+The Second Coil of Bahamut - Turn 2,Normal Raid (ARR),50,130,North Shroud,Full Party,Savage,Bahamut Key
+The Second Coil of Bahamut - Turn 3,Normal Raid (ARR),50,130,North Shroud,Full Party,Savage,Bahamut Key
+The Second Coil of Bahamut - Turn 4,Normal Raid (ARR),50,130,North Shroud,Full Party,Savage,Bahamut Key
+The Second Coil of Bahamut - Turn 1 (Savage),Savage Raid (ARR),50,130,North Shroud,Full Party,Savage,Bahamut Key
+The Second Coil of Bahamut - Turn 2 (Savage),Savage Raid (ARR),50,130,North Shroud,Full Party,Savage,Bahamut Key
+The Second Coil of Bahamut - Turn 3 (Savage),Savage Raid (ARR),50,130,North Shroud,Full Party,Savage,Bahamut Key
+The Second Coil of Bahamut - Turn 4 (Savage),Savage Raid (ARR),50,130,North Shroud,Full Party,Savage,Bahamut Key
+The Final Coil of Bahamut - Turn 1,Normal Raid (ARR),50,130,Northern Thanalan,Full Party,Savage,Bahamut Key
+The Final Coil of Bahamut - Turn 2,Normal Raid (ARR),50,130,Northern Thanalan,Full Party,Savage,Bahamut Key
+The Final Coil of Bahamut - Turn 3,Normal Raid (ARR),50,130,Northern Thanalan,Full Party,Savage,Bahamut Key
+The Final Coil of Bahamut - Turn 4,Normal Raid (ARR),50,130,Northern Thanalan,Full Party,Savage,Bahamut Key
 ,,,,,,,
 The Labyrinth of the Ancients,Alliance Raid (ARR),50,130,Mor Dhona,Alliance,Normal,
 Syrcus Tower,Alliance Raid (ARR),50,130,Mor Dhona,Alliance,Normal,
@@ -118,34 +118,153 @@ The Minstrel's Ballad: Nidhogg's Rage,Trial (HW),60,270,Ishgard,Full Party,Savag
 Containment Bay P1T6 (Extreme),Trial (HW),60,270,Azys Lla,Full Party,Savage,
 Containment Bay Z1T9 (Extreme),Trial (HW),60,270,Azys Lla,Full Party,Savage,
 ,,,,,,,
-The Fist of the Father,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,
-The Cuff of the Father,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,
-The Arm of the Father,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,
-The Burden of the Father,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,
-The Fist of the Son,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,
-The Cuff of the Son,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,
-The Arm of the Son,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,
-The Burden of the Son,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,
-The Eyes of the Creator,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,
-The Breath of the Creator,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,
-The Heart of the Creator,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,
-The Soul of the Creator,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,
-The Fist of the Father (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,
-The Cuff of the Father (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,
-The Arm of the Father (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,
-The Burden of the Father (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,
-The Fist of the Son (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,
-The Cuff of the Son (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,
-The Arm of the Son (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,
-The Burden of the Son (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,
-The Eyes of the Creator (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,
-The Breath of the Creator (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,
-The Heart of the Creator (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,
-The Soul of the Creator (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,
+The Fist of the Father,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,Alexander Key
+The Cuff of the Father,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,Alexander Key
+The Arm of the Father,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,Alexander Key
+The Burden of the Father,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,Alexander Key
+The Fist of the Son,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,Alexander Key
+The Cuff of the Son,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,Alexander Key
+The Arm of the Son,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,Alexander Key
+The Burden of the Son,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,Alexander Key
+The Eyes of the Creator,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,Alexander Key
+The Breath of the Creator,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,Alexander Key
+The Heart of the Creator,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,Alexander Key
+The Soul of the Creator,Normal Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Normal,Alexander Key
+The Fist of the Father (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,Alexander Key
+The Cuff of the Father (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,Alexander Key
+The Arm of the Father (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,Alexander Key
+The Burden of the Father (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,Alexander Key
+The Fist of the Son (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,Alexander Key
+The Cuff of the Son (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,Alexander Key
+The Arm of the Son (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,Alexander Key
+The Burden of the Son (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,Alexander Key
+The Eyes of the Creator (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,Alexander Key
+The Breath of the Creator (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,Alexander Key
+The Heart of the Creator (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,Alexander Key
+The Soul of the Creator (Savage),Savage Raid (HW),60,270,The Dravanian Hinterlands and Idyllshire,Full Party,Savage,Alexander Key
 ,,,,,,,
 The Void Ark,Alliance Raid (HW),60,270,The Sea of Clouds,Alliance,Normal,
-The Weeping City of Mhach,,60,270,The Sea of Clouds,Alliance,Normal,
-Dun Scaith,,60,270,The Sea of Clouds,Alliance,Normal,
+The Weeping City of Mhach,Alliance Raid (HW),60,270,The Sea of Clouds,Alliance,Normal,
+Dun Scaith,Alliance Raid (HW),60,270,The Sea of Clouds,Alliance,Normal,
 ,,,,,,,
 STB,,,,,,,
+The Sirensong Sea,Dungeon (StB),61,,Limsa Lominsa and Middle La Noscea,Solo,Normal,
+Shisui of the Violet Tides,Dungeon (StB),63,,The Ruby Sea,Solo,Normal,
+Bardam's Mettle,Dungeon (StB),65,,The Azim Steppe,Solo,Normal,
+Doma Castle,Dungeon (StB),67,,Yanxia,Solo,Normal,
+Castrum Abania,Dungeon (StB),69,,The Peaks,Solo,Normal,
+Ala Mhigo,Dungeon (StB),70,,The Lochs,Solo,Normal,
+Kugane Castle,Dungeon (StB),70,,Kugane,Solo,Normal,
+The Temple of the Fist,Dungeon (StB),70,,Rhalgr's Reach,Solo,Normal,
+The Drowned City of Skalla,Dungeon (StB),70,,The Lochs,Solo,Normal,
+Hell's Lid,Dungeon (StB),70,,The Ruby Sea,Solo,Normal,
+The Fractal Continuum (Hard),Dungeon (StB),70,,Azys Lla,Solo,Normal,
+The Swallow's Compass,Dungeon (StB),70,,Yanxia,Solo,Normal,
+The Burn,Dungeon (StB),70,,Yanxia,Solo,Normal,
+Saint Mocianne's Arboretum (Hard),Dungeon (StB),70,,The Dravanian Hinterlands and Idyllshire,Solo,Normal,
+The Ghimlyt Dark,Dungeon (StB),70,,The Lochs,Solo,Normal,
+,,,,,,,
+The Pool of Tribute,Trial (StB),63,,The Ruby Sea,Solo,Normal,
+Emanation,Trial (StB),67,,The Fringes,Solo,Normal,
+The Royal Menagerie,Trial (StB),70,,The Lochs,Solo,Normal,
+The Jade Stoa,Trial (StB),70,,Yanxia,Solo,Normal,
+Castrum Fluminis,Trial (StB),70,,Yanxia,Solo,Normal,
+The Great Hunt,Trial (StB),70,,The Azim Steppe,Solo,Normal,
+Hells' Kier,Trial (StB),70,,The Ruby Sea,Solo,Normal,
+The Wreath of Snakes,Trial (StB),70,,The Ruby Sea,Solo,Normal,
+Kugane Ohashi,Trial (StB),70,,Kugane,Solo,Normal,
+,,,,,,,
+The Pool of Tribute (Extreme),Trial (StB),70,,The Ruby Sea,Full Party,Savage,
+Emanation (Extreme),Trial (StB),70,,The Fringes,Full Party,Savage,
+The Minstrel's Ballad: Shinryu's Domain,Trial (StB),70,,The Lochs,Full Party,Savage,
+The Jade Stoa (Extreme),Trial (StB),70,,Yanxia,Full Party,Savage,
+The Minstrel's Ballad: Tsukuyomi's Pain,Trial (StB),70,,Yanxia,Full Party,Savage,
+The Great Hunt (Extreme),Trial (StB),70,,The Azim Steppe,Full Party,Savage,
+Hells' Kier (Extreme),Trial (StB),70,,The Ruby Sea,Full Party,Savage,
+The Wreath of Snakes (Extreme),Trial (StB),70,,The Ruby Sea,Full Party,Savage,
+,,,,,,,
+Deltascape V1.0,Normal Raid (StB),70,,The Fringes,Full Party,Normal,Omega Key
+Deltascape V2.0,Normal Raid (StB),70,,The Fringes,Full Party,Normal,Omega Key
+Deltascape V3.0,Normal Raid (StB),70,,The Fringes,Full Party,Normal,Omega Key
+Deltascape V4.0,Normal Raid (StB),70,,The Fringes,Full Party,Normal,Omega Key
+Sigmascape V1.0,Normal Raid (StB),70,,The Fringes,Full Party,Normal,Omega Key
+Sigmascape V2.0,Normal Raid (StB),70,,The Fringes,Full Party,Normal,Omega Key
+Sigmascape V3.0,Normal Raid (StB),70,,The Fringes,Full Party,Normal,Omega Key
+Sigmascape V4.0,Normal Raid (StB),70,,The Fringes,Full Party,Normal,Omega Key
+Alphascape V1.0,Normal Raid (StB),70,,The Fringes,Full Party,Normal,Omega Key
+Alphascape V2.0,Normal Raid (StB),70,,The Fringes,Full Party,Normal,Omega Key
+Alphascape V3.0,Normal Raid (StB),70,,The Fringes,Full Party,Normal,Omega Key
+Alphascape V4.0,Normal Raid (StB),70,,The Fringes,Full Party,Normal,Omega Key
+Deltascape V1.0 (Savage),Savage Raid (StB),70,,The Fringes,Full Party,Savage,Omega Key
+Deltascape V2.0 (Savage),Savage Raid (StB),70,,The Fringes,Full Party,Savage,Omega Key
+Deltascape V3.0 (Savage),Savage Raid (StB),70,,The Fringes,Full Party,Savage,Omega Key
+Deltascape V4.0 (Savage),Savage Raid (StB),70,,The Fringes,Full Party,Savage,Omega Key
+Sigmascape V1.0 (Savage),Savage Raid (StB),70,,The Fringes,Full Party,Savage,Omega Key
+Sigmascape V2.0 (Savage),Savage Raid (StB),70,,The Fringes,Full Party,Savage,Omega Key
+Sigmascape V3.0 (Savage),Savage Raid (StB),70,,The Fringes,Full Party,Savage,Omega Key
+Sigmascape V4.0 (Savage),Savage Raid (StB),70,,The Fringes,Full Party,Savage,Omega Key
+Alphascape V1.0 (Savage),Savage Raid (StB),70,,The Fringes,Full Party,Savage,Omega Key
+Alphascape V2.0 (Savage),Savage Raid (StB),70,,The Fringes,Full Party,Savage,Omega Key
+Alphascape V3.0 (Savage),Savage Raid (StB),70,,The Fringes,Full Party,Savage,Omega Key
+Alphascape V4.0 (Savage),Savage Raid (StB),70,,The Fringes,Full Party,Savage,Omega Key
+,,,,,,,
+The Royal City of Rabanastre,Alliance Raid (StB),70,,Kugane,Alliance,Normal,
+The Ridorana Lighthouse,Alliance Raid (StB),70,,Kugane,Alliance,Normal,
+The Orbonne Monastery,Alliance Raid (StB),70,,Kugane,Alliance,Normal,
+,,,,,,,
 SHB,,,,,,,
+Holminster Switch,Dungeon (ShB),71,,Lakeland,Solo,Normal,
+Dhon Mheg,Dungeon (ShB),73,,Il Mheg,Solo,Normal,
+The Qitana Ravel,Dungeon (ShB),75,,The Rak'tika Greatwood,Solo,Normal,
+Malikah’s Well,Dungeon (ShB),77,,Amh Araeng,Solo,Normal,
+Mt. Gulg,Dungeon (ShB),79,,Kholusia,Solo,Normal,
+Amaurot,Dungeon (ShB),80,,The Tempest,Solo,Normal,
+The Twinning,Dungeon (ShB),80,,The Crystarium,Solo,Normal,
+Akademia Anyder,Dungeon (ShB),80,,The Tempest,Solo,Normal,
+The Grand Cosmos,Dungeon (ShB),80,,Lakeland,Solo,Normal,
+Anamnesis Anyder,Dungeon (ShB),80,,Kholusia,Solo,Normal,
+The Heroes’ Gauntlet,Dungeon (ShB),80,,Eulmore,Solo,Normal,
+Matoya’s Relict,Dungeon (ShB),80,,The Dravanian Hinterlands and Idyllshire,Solo,Normal,
+Paglth’an,Dungeon (ShB),80,,Ul'dah and Central Thanalan,Solo,Normal,
+,,,,,,,
+The Dancing Plague,Trial (ShB),73,,Il Mheg,Solo,Normal,
+The Crown of the Immaculate,Trial (ShB),79,,Kholusia,Solo,Normal,
+The Dying Gasp,Trial (ShB),80,,The Tempest,Solo,Normal,
+Cinder Drift,Trial (ShB),80,,The Lochs,Solo,Normal,
+The Seat of Sacrifice,Trial (ShB),80,,The Crystarium,Solo,Normal,
+Castrum Marinum,Trial (ShB),80,,Western Thanalan,Solo,Normal,
+The Cloud Deck,Trial (ShB),80,,The Lochs,Solo,Normal,
+,,,,,,,
+The Dancing Plague (Extreme),Trial (ShB),80,,Il Mheg,Full Party,Savage,
+The Crown of the Immaculate (Extreme),Trial (ShB),80,,Kholusia,Full Party,Savage,
+The Dying Gasp (Extreme),Trial (ShB),80,,The Tempest,Full Party,Savage,
+Cinder Drift (Extreme),Trial (ShB),80,,The Lochs,Full Party,Savage,
+Memoria Misera (Extreme),Trial (ShB),80,,Yanxia,Full Party,Savage,
+The Seat of Sacrifice (Extreme),Trial (ShB),80,,The Crystarium,Full Party,Savage,
+Castrum Marinum (Extreme),Trial (ShB),80,,Western Thanalan,Full Party,Savage,
+The Cloud Deck (Extreme),Trial (ShB),80,,The Lochs,Full Party,Savage,
+,,,,,,,
+Eden’s Gate: Resurrection,Normal Raid (ShB),80,,Amh Araeng,Full Party,Normal,Eden Key
+Eden’s Gate: Descent,Normal Raid (ShB),80,,Amh Araeng,Full Party,Normal,Eden Key
+Eden’s Gate: Inundation,Normal Raid (ShB),80,,Amh Araeng,Full Party,Normal,Eden Key
+Eden’s Gate: Sepulture,Normal Raid (ShB),80,,Amh Araeng,Full Party,Normal,Eden Key
+Eden’s Verse: Fulmination,Normal Raid (ShB),80,,Amh Araeng,Full Party,Normal,Eden Key
+Eden’s Verse: Furor,Normal Raid (ShB),80,,Amh Araeng,Full Party,Normal,Eden Key
+Eden’s Verse: Iconoclasm,Normal Raid (ShB),80,,Amh Araeng,Full Party,Normal,Eden Key
+Eden’s Verse: Refulgence,Normal Raid (ShB),80,,Amh Araeng,Full Party,Normal,Eden Key
+Eden’s Promise: Umbra,Normal Raid (ShB),80,,Amh Araeng,Full Party,Normal,Eden Key
+Eden’s Promise: Litany,Normal Raid (ShB),80,,Amh Araeng,Full Party,Normal,Eden Key
+Eden’s Promise: Anamorphosis,Normal Raid (ShB),80,,Amh Araeng,Full Party,Normal,Eden Key
+Eden’s Promise: Eternity,Normal Raid (ShB),80,,Amh Araeng,Full Party,Normal,Eden Key
+Eden’s Gate: Resurrection (Savage),Savage Raid (ShB),80,,Amh Araeng,Full Party,Savage,Eden Key
+Eden’s Gate: Descent (Savage),Savage Raid (ShB),80,,Amh Araeng,Full Party,Savage,Eden Key
+Eden’s Gate: Inundation (Savage),Savage Raid (ShB),80,,Amh Araeng,Full Party,Savage,Eden Key
+Eden’s Gate: Sepulture (Savage),Savage Raid (ShB),80,,Amh Araeng,Full Party,Savage,Eden Key
+Eden’s Verse: Fulmination (Savage),Savage Raid (ShB),80,,Amh Araeng,Full Party,Savage,Eden Key
+Eden’s Verse: Furor (Savage),Savage Raid (ShB),80,,Amh Araeng,Full Party,Savage,Eden Key
+Eden’s Verse: Iconoclasm (Savage),Savage Raid (ShB),80,,Amh Araeng,Full Party,Savage,Eden Key
+Eden’s Verse: Refulgence (Savage),Savage Raid (ShB),80,,Amh Araeng,Full Party,Savage,Eden Key
+Eden’s Promise: Umbra (Savage),Savage Raid (ShB),80,,Amh Araeng,Full Party,Savage,Eden Key
+Eden’s Promise: Litany (Savage),Savage Raid (ShB),80,,Amh Araeng,Full Party,Savage,Eden Key
+Eden’s Promise: Anamorphosis (Savage),Savage Raid (ShB),80,,Amh Araeng,Full Party,Savage,Eden Key
+Eden’s Promise: Eternity (Savage),Savage Raid (ShB),80,,Amh Araeng,Full Party,Savage,Eden Key
