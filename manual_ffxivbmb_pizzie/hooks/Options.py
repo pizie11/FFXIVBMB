@@ -87,7 +87,7 @@ class RequireBasicInstinct(Toggle):
 
     Note: This setting does nothing if party_size is not set to Solo
     """
-    display_name = "Require #91 Basic Instinct for relevant content"
+    display_name = "Require #91 Basic Instinct"
 
 class GearMode(Choice):
     """
