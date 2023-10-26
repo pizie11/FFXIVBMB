@@ -107,7 +107,7 @@ def generate_duty_list():
             duty_list.append(
                 {
                     "name": row[0],
-                    "region": "Solo Duty",
+                    "region": "Duty",
                     "category": [row[1]], #, row[4]],
                     "requires": requires_str,
                     #"level" : row[3]

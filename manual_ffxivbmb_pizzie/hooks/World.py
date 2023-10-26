@@ -35,6 +35,10 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
     duty_diff = get_option_value(multiworld, player, "duty_diff") or 0
     expac_goal = get_option_value(multiworld, player, "expac_goal") or 0
     main_duties = get_option_value(multiworld, player, "main_duties") or 0
+
+    # Include Basic Instinct in requirements for duties if going solo
+    if party_size == 0:
+        region_table["Duty"]["requires"] += " and |#91 Basic Instinct|" 
     
     locations_to_remove = []
     # Remove locations based on options

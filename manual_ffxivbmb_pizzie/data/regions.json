@@ -390,8 +390,8 @@
 			"Kholusia"
 		]
 	},
-	"Solo Duty": {
+	"Duty": {
 		"starting": true,
-		"requires": "|#91 Basic Instinct| and |#30 Mighty Guard| and |#77 Aetheric Mimicry| and |#58 Pom Cure| and |#33 The Ram's Voice| and |#92 Ultravibration| and |#59 Gobskin| and |Spell Slot:8|"
+		"requires": "|#30 Mighty Guard| and |#77 Aetheric Mimicry| and |#58 Pom Cure| and |#33 The Ram's Voice| and |#92 Ultravibration| and |#59 Gobskin| and |Spell Slot:8|"
 	}												
 }
