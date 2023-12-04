@@ -196,8 +196,8 @@ class ManualWorld(World):
 
         after_generate_basic(self, self.multiworld, self.player)
 
-        from Utils import visualize_regions
-        visualize_regions(self.multiworld.get_region("Menu", self.player), f"{self.game}.puml")
+        # from Utils import visualize_regions
+        # visualize_regions(self.multiworld.get_region("Menu", self.player), f"{self.game}.puml")
 
 
     def create_item(self, name: str) -> Item:
