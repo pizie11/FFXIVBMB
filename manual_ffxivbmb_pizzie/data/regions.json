@@ -189,7 +189,8 @@
 		"requires": "|Mor Dhona Access:1|",
 		"connects_to": [
 			"Northern Thanalan",
-			"Coerthas Central Highlands"
+			"Coerthas Central Highlands",
+			"The Crystarium"
 		]
 	},
 
