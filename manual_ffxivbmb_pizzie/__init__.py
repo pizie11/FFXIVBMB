@@ -1,9 +1,12 @@
+from base64 import b64encode
+import os
 import random
+import json
 
-from .Data import item_table, progressive_item_table, location_table
+from .Data import item_table, progressive_item_table, location_table, region_table
 from .Game import game_name, filler_item_name, starting_items
-from .Locations import location_id_to_name, location_name_to_id, location_name_to_location
-from .Items import item_id_to_name, item_name_to_id, item_name_to_item, advancement_item_names
+from .Locations import location_id_to_name, location_name_to_id, location_name_to_location, location_name_groups
+from .Items import item_id_to_name, item_name_to_id, item_name_to_item, advancement_item_names, item_name_groups
 
 from .Regions import create_regions
 from .Items import ManualItem
@@ -38,7 +41,7 @@ class ManualWorld(World):
     """
     Manual games allow you to set custom check locations and custom item names that will be rolled into a multiworld.
     This allows any variety of game -- PC, console, board games, Microsoft Word memes... really anything -- to be part of a multiworld randomizer.
-    The key component to including these games is some level of manual restriction. Since the items are not actually withheld from the player, 
+    The key component to including these games is some level of manual restriction. Since the items are not actually withheld from the player,
     the player must manually refrain from using these gathered items until the tracker shows that they have been acquired or sent.
     """
     game: str = game_name
@@ -54,11 +57,13 @@ class ManualWorld(World):
     item_id_to_name = item_id_to_name
     item_name_to_id = item_name_to_id
     item_name_to_item = item_name_to_item
+    item_name_groups = item_name_groups
     advancement_item_names = advancement_item_names
     location_table = location_table # this is likely imported from Data instead of Locations because the Game Complete location should not be in here, but is used for lookups
     location_id_to_name = location_id_to_name
     location_name_to_id = location_name_to_id
     location_name_to_location = location_name_to_location
+    location_name_groups = location_name_groups
 
     def pre_fill(self):
         before_pre_fill(self, self.multiworld, self.player)
@@ -68,7 +73,7 @@ class ManualWorld(World):
 
         location_game_complete.place_locked_item(
             ManualItem("__Victory__", ItemClassification.progression, None, player=self.player))
-        
+
         after_pre_fill(self, self.multiworld, self.player)
 
     def generate_basic(self):
@@ -99,7 +104,7 @@ class ManualWorld(World):
             for i in range(item_count):
                 new_item = self.create_item(name)
                 pool.append(new_item)
-                
+
         items_started = []
 
         if starting_items:
@@ -159,7 +164,7 @@ class ManualWorld(World):
                     continue
 
                 eligible_items = [item for item in self.multiworld.itempool if item.name in location["place_item"] and item.player == self.player]
-                
+
                 if len(eligible_items) == 0:
                     raise Exception("Could not find a suitable item to place at %s. No items that match %s." % (location["name"], ", ".join(location["place_item"])))
 
@@ -190,7 +195,11 @@ class ManualWorld(World):
             self.multiworld.itempool.remove(item_to_place)
 
         after_generate_basic(self, self.multiworld, self.player)
-                        
+
+        from Utils import visualize_regions
+        visualize_regions(self.multiworld.get_region("Menu", self.player), f"{self.game}.puml")
+
+
     def create_item(self, name: str) -> Item:
         name = before_create_item(name, self, self.multiworld, self.player)
 
@@ -211,7 +220,7 @@ class ManualWorld(World):
 
         item_object = ManualItem(name, classification,
                         self.item_name_to_id[name], player=self.player)
-        
+
         item_object = after_create_item(item_object, self, self.multiworld, self.player)
 
         return item_object
@@ -229,7 +238,7 @@ class ManualWorld(World):
         create_regions(self, self.multiworld, self.player)
 
         after_create_regions(self, self.multiworld, self.player)
-        
+
     def fill_slot_data(self):
         slot_data = before_fill_slot_data({}, self, self.multiworld, self.player)
 
@@ -238,3 +247,23 @@ class ManualWorld(World):
         slot_data = after_fill_slot_data(slot_data, self, self.multiworld, self.player)
 
         return slot_data
+
+    def client_data(self):
+
+        return {
+            "game": self.game,
+            'player_name': self.multiworld.get_player_name(self.player),
+            'player_id': self.player,
+            'items': self.item_name_to_item,
+            'locations': self.location_name_to_location,
+            # todo: extract connections out of mutliworld.get_regions() instead, in case hooks have modified the regions.
+            'regions': region_table,
+
+        }
+
+    def generate_output(self, output_directory: str):
+        data = self.client_data()
+        filename = f"{self.multiworld.get_out_file_name_base(self.player)}.apmanual"
+        with open(os.path.join(output_directory, filename), 'wb') as f:
+            f.write(b64encode(bytes(json.dumps(data), 'utf-8')))
+

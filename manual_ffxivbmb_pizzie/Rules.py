@@ -28,7 +28,7 @@ def infix_to_postfix(expr, location):
         while stack:
             postfix += stack.pop()
     except Exception:
-        raise KeyError("Invalid logic format for location/region {}.".format(location)) 
+        raise KeyError("Invalid logic format for location/region {}.".format(location))
     return postfix
 
 
@@ -52,8 +52,8 @@ def evaluate_postfix(expr, location):
                 op = stack.pop()
                 stack.append(not op)
     except Exception:
-        raise KeyError("Invalid logic format for location/region {}.".format(location)) 
-    
+        raise KeyError("Invalid logic format for location/region {}.".format(location))
+
     if len(stack) != 1:
         raise KeyError("Invalid logic format for location/region {}.".format(location))
     return stack.pop()
@@ -116,7 +116,7 @@ def set_rules(base: World, world: MultiWorld, player: int):
             if (isinstance(item, dict) and "or" in item and isinstance(item["or"], list)) or (isinstance(item, list)):
                 canAccessOr = True
                 or_items = item
-                
+
                 if isinstance(item, dict):
                     or_items = item["or"]
 
@@ -170,15 +170,15 @@ def set_rules(base: World, world: MultiWorld, player: int):
             for exitRegion in world.get_region(region, player).exits:
                 def fullRegionCheck(state, region=regionMap[region]):
                     return fullLocationOrRegionCheck(state, region)
-                
-                set_rule(world.get_entrance(exitRegion.name, player), fullRegionCheck)    
+
+                set_rule(world.get_entrance(exitRegion.name, player), fullRegionCheck)
 
     # Location access rules
     for location in base.location_table:
         locFromWorld = world.get_location(location["name"], player)
 
         locationRegion = regionMap[location["region"]] if "region" in location else None
-        
+
         if "requires" in location: # Location has requires, check them alongside the region requires
             def checkBothLocationAndRegion(state, location=location, region=locationRegion):
                 locationCheck = fullLocationOrRegionCheck(state, location)
@@ -188,17 +188,17 @@ def set_rules(base: World, world: MultiWorld, player: int):
                     regionCheck = fullLocationOrRegionCheck(state, region)
 
                 return locationCheck and regionCheck
-            
+
             set_rule(locFromWorld, checkBothLocationAndRegion)
         elif "region" in location: # Only region access required, check the location's region's requires
             def fullRegionCheck(state, region=locationRegion):
                 return fullLocationOrRegionCheck(state, region)
-            
+
             set_rule(locFromWorld, fullRegionCheck)
         else: # No location region and no location requires? It's accessible.
             def allRegionsAccessible(state):
                 return True
-            
+
             set_rule(locFromWorld, allRegionsAccessible)
 
     # Victory requirement

@@ -12,6 +12,7 @@ progressive_item_table = before_progressive_item_table_processed(progressive_ite
 
 item_id_to_name = {}
 item_name_to_item = {}
+item_name_groups = {}
 advancement_item_names = set()
 lastItemId = -1
 
@@ -35,9 +36,14 @@ for item in item_table:
     item_name_to_item[item_name] = item
     if item["progression"]:
         advancement_item_names.add(item_name)
-    
-    if item["id"] != None:
+
+    if item["id"] is not None:
         lastItemId = max(lastItemId, item["id"])
+
+    for c in item.get("category", []):
+        if c not in item_name_groups:
+            item_name_groups[c] = []
+        item_name_groups[c].append(item_name)
 
 progressive_item_list = {}
 
@@ -58,6 +64,7 @@ for progressiveItemName in progressive_item_list.keys():
 
 item_id_to_name[None] = "__Victory__"
 item_name_to_id = {name: id for id, name in item_id_to_name.items()}
+
 
 ######################
 # Item classes
