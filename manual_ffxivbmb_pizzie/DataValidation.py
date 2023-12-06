@@ -20,18 +20,15 @@ class DataValidation():
 
             if isinstance(location["requires"], str):
                 # parse user written statement into list of each item
-                reqires_raw = re.split('(\AND|\)|\(|OR|\|)', location["requires"])
-                remove_spaces = [x.strip() for x in reqires_raw]
-                remove_empty = [x for x in remove_spaces if x != '']
-                requires_list = [x for x in remove_empty if x != '|']
-
-                for i, item in enumerate(requires_list):
+                for item in re.findall(r'\|[^|]+\|', location["requires"]):
                     if item.lower() == "or" or item.lower() == "and" or item == ")" or item == "(":
                         continue
                     else:
                         # it's just a category, so ignore it
                         if '@' in item:
                             continue
+
+                        item = item.replace("|", "")
 
                         item_parts = item.split(":")
                         item_name = item
@@ -86,18 +83,15 @@ class DataValidation():
 
             if isinstance(region["requires"], str):
                 # parse user written statement into list of each item
-                reqires_raw = re.split('(\AND|\)|\(|OR|\|)', region["requires"])
-                remove_spaces = [x.strip() for x in reqires_raw]
-                remove_empty = [x for x in remove_spaces if x != '']
-                requires_list = [x for x in remove_empty if x != '|']
-
-                for i, item in enumerate(requires_list):
+                for item in re.findall(r'\|[^|]+\|', region["requires"]):
                     if item.lower() == "or" or item.lower() == "and" or item == ")" or item == "(":
                         continue
                     else:
                         # it's just a category, so ignore it
                         if '@' in item:
                             continue
+
+                        item = item.replace("|", "")
 
                         item_parts = item.split(":")
                         item_name = item
@@ -141,7 +135,6 @@ class DataValidation():
 
                         if not item_exists:
                             raise ValidationError("Item %s is required by region %s but is misspelled or does not exist." % (item_name, region_name))
-        pass
 
     @staticmethod
     def checkRegionNamesInLocations():
@@ -173,8 +166,13 @@ class DataValidation():
                 # convert to json so we don't have to guess the data type
                 location_requires = json.dumps(location["requires"])
 
-                if item["name"] in location_requires:
-                    raise ValidationError("Item %s is required by location %s, but the item is not marked as progression." % (item["name"], location["name"]))
+                # if boolean, else legacy
+                if isinstance(location_requires, str):
+                    if '|{}|'.format(item["name"]) in location_requires:
+                        raise ValidationError("Item %s is required by location %s, but the item is not marked as progression." % (item["name"], location["name"]))
+                else:
+                    if item["name"] in location_requires:
+                        raise ValidationError("Item %s is required by location %s, but the item is not marked as progression." % (item["name"], location["name"]))
 
             # check region requires for the presence of item name
             for region_name in DataValidation.region_table:
@@ -257,9 +255,9 @@ class DataValidation():
                         raise ValidationError("Item %s is set as a starting item, but is misspelled or is not defined." % (item_name))
             
             if "item_categories" in starting_block:
-               for category_name in starting_block["item_categories"]:
-                   if len([item for item in DataValidation.item_table if "category" in item and category_name in item["category"]]) == 0:
-                       raise ValidationError("Item category %s is set as a starting item category, but is misspelled or is not defined on any items." % (category_name))
+                for category_name in starting_block["item_categories"]:
+                    if len([item for item in DataValidation.item_table if "category" in item and category_name in item["category"]]) == 0:
+                        raise ValidationError("Item category %s is set as a starting item category, but is misspelled or is not defined on any items." % (category_name))
 
     @staticmethod
     def checkForGameBeingInvalidJSON():
@@ -273,9 +271,8 @@ class DataValidation():
         
     @staticmethod
     def checkForLocationsBeingInvalidJSON():
-        #pass
         if len(DataValidation.location_table) == 0:
-           raise ValidationError("No locations were found in your locations.json. This likely indicates that your JSON is incorrectly formatted. Use https://jsonlint.com/ to validate your JSON files.")
+            raise ValidationError("No locations were found in your locations.json. This likely indicates that your JSON is incorrectly formatted. Use https://jsonlint.com/ to validate your JSON files.")
         
     @staticmethod
     def checkForGameFillerMatchingAnItemName():
