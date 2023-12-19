@@ -108,7 +108,7 @@ def generate_duty_list():
                 {
                     "name": row[0],
                     "region": "Duty",
-                    "category": [row[1]], #, row[4]],
+                    "category": [row[1], row[4]],
                     "requires": requires_str,
                     #"level" : row[3]
                     "party" : row[5],
@@ -181,18 +181,18 @@ def after_load_location_file(location_table: list) -> list:
     #add FATE locations
     fate_list = []
     fate_zones = {
-        "MLN": [3,3], 
+        "MLN": [3,3],
         "LLN": [3,3],
         "ELN": [30,30],
         "WLN": [10,10,],
-        "ULN": [20,20], 
+        "ULN": [20,20],
         "OLN": [30,30],
 
         "CS": [4,4],
         "ES": [11,11],
         "SS": [21,21],
         "NS": [3,3],
-        
+
         "CT": [5,5],
         "WT": [5,5],
         "ET": [15,15],
@@ -249,10 +249,10 @@ def after_load_region_file(region_table: dict) -> dict:
 
 
 def create_FATE_location(number, key, lvl):
-    return { 
+    return {
             "name": short_long[key] + ": FATE #" + str(number),
             "region": short_long[key],
-            "category": ["FATEs"], #, short_long[key]],
+            "category": ["FATEs", short_long[key]],
             "requires": "|10 Equip Levels:" + str(ceil(lvl/10)) + "|"
         }
 
