@@ -279,7 +279,7 @@
 	{
 		"name": "Use Self-Destruct",
 		"category": ["Trap"],
-		"count": 4,
+		"count": 0,
 		"trap": true
 	},
 	{

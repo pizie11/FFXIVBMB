@@ -255,3 +255,7 @@ def create_FATE_location(number, key, lvl):
             "category": ["FATEs"], #, short_long[key]],
             "requires": "|10 Equip Levels:" + str(ceil(lvl/10)) + "|"
         }
+
+# called after the categories.json file has been loaded
+def after_load_category_file(category_table: dict) -> dict:
+    return category_table

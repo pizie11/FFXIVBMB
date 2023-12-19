@@ -10,10 +10,10 @@ progressive_item_table = before_progressive_item_table_processed(progressive_ite
 # Generate item lookups
 ######################
 
-item_id_to_name = {}
-item_name_to_item = {}
-item_name_groups = {}
-advancement_item_names = set()
+item_id_to_name: dict[int, str] = {}
+item_name_to_item: dict[str, dict] = {}
+item_name_groups: dict[str, str] = {}
+advancement_item_names: set[str] = set()
 lastItemId = -1
 
 count = starting_index
