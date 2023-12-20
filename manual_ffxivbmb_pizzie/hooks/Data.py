@@ -1,8 +1,6 @@
-from statistics import median
-from math import floor, ceil
+from math import ceil
 
 import csv
-import os
 import pkgutil
 
 short_long = {
@@ -10,14 +8,14 @@ short_long = {
     "LLN": "Lower La Noscea",
     "ELN": "Eastern La Noscea",
     "WLN": "Western La Noscea",
-    "ULN": "Upper La Noscea", 
+    "ULN": "Upper La Noscea",
     "OLN": "Outer La Noscea",
 
     "CS": "Central Shroud",
     "ES": "East Shroud",
     "SS": "South Shroud",
     "NS": "North Shroud",
-        
+
     "CT": "Central Thanalan",
     "WT": "Western Thanalan",
     "ET": "Eastern Thanalan",
@@ -64,7 +62,7 @@ def generate_spell_list():
     spellreader = csv.reader(pkgutil.get_data(__name__, "spells.csv").decode().splitlines(), delimiter=',', quotechar='|')
     count = 1
     for row in spellreader:
-        if row[0] != "" and row[0] != "Name" and row[0] != "ARR" and row[0] != "HW" and row[0] != "STB" and row[0] != "SHB":
+        if row[0] not in ["", "Name", "ARR", "HW", "STB", "SHB"]:
             #print("#" + str(count) + " " + row[0])
             spell_list.append(
                 {
@@ -74,12 +72,12 @@ def generate_spell_list():
                     row[5]: True
                 }
             )
-        
+
             if row[1] == "Damage" and row[2] == "Magic":
                 mag_spells += "|#" + str(count) + " " + row[0] + "| or "
-            if row[1] == "Damage" and row[2] == "Physical": 
+            if row[1] == "Damage" and row[2] == "Physical":
                 phys_spells += "|#" + str(count) + " " + row[0] + "| or "
-        
+
             count += 1
 
     mag_spells = mag_spells[:-4] +")"
@@ -95,9 +93,9 @@ def generate_duty_list():
     duty_list = []
 
     dutyreader = csv.reader(pkgutil.get_data(__name__, "duties.csv").decode().splitlines(), delimiter=',', quotechar='|')
-    
+
     for row in dutyreader:
-        if row[0] != "" and row[0] != "Name" and row[0] != "ARR" and row[0] != "HW" and row[0] != "STB" and row[0] != "SHB":
+        if row[0] not in ["", "Name", "ARR", "HW", "STB", "SHB"]:
             #print(', '.join(row))
             #print(str(ceil(int(row[2])/10)) + " "+ str(ceil(int(row[3])/10)))
             requires_str = "|10 Equip Levels:" + str(ceil(int(row[2])/10)) + "| and |" + row[4] + " Access:1|"
@@ -117,7 +115,7 @@ def generate_duty_list():
             )
 
     return duty_list
-    
+
 
 duty_locations = generate_duty_list()
 
@@ -127,7 +125,7 @@ def after_load_item_file(item_table: list) -> list:
     item_table.extend(spell_items)
     return item_table
 
-# NOTE: Progressive items are not currently supported in Manual. Once they are, 
+# NOTE: Progressive items are not currently supported in Manual. Once they are,
 #       this hook will provide the ability to meaningfully change those.
 def after_load_progressive_item_file(progressive_item_table: list) -> list:
     return progressive_item_table
@@ -138,7 +136,7 @@ def after_load_location_file(location_table: list) -> list:
         # add Masked Carnivale locations
     mc_list = []
     for i in range(1,32):
-        mc_list.append({ 
+        mc_list.append({
             "name": "Masked Carnivale #" + str(i),
             "region": "Masked Carnivale",
             "category": ["Masked Carnivale"],
