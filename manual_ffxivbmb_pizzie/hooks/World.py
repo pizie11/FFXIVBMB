@@ -140,8 +140,8 @@ def after_set_rules(world: World, multiworld: MultiWorld, player: int):
     pass
 
 # The complete item pool prior to being set for generation is provided here, in case you want to make changes to it
-def before_generate_basic(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
-    return item_pool
+def before_generate_basic(world: World, multiworld: MultiWorld, player: int) -> list:
+    pass
 
 # This method is run at the very end of pre-generation, once the place_item options have been handled and before AP generation occurs
 def after_generate_basic(world: World, multiworld: MultiWorld, player: int):
