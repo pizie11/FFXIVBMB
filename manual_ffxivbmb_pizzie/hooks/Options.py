@@ -1,13 +1,13 @@
 # Object classes from AP that represent different types of options that you can create
-from Options import FreeText, NumericOption, Toggle, DefaultOnToggle, Choice, TextChoice, Range, SpecialRange
-
+from Options import Option, FreeText, NumericOption, Toggle, DefaultOnToggle, Choice, TextChoice, Range, NamedRange, OptionGroup, PerGameCommonOptions
+from typing import Type
 # These helper methods allow you to determine if an option has been set, or what its value is, for any player in the multiworld
 from ..Helpers import is_option_enabled, get_option_value
 
 
 
 ####################################################################
-# NOTE: At the time that options are created, Manual has no concept of the multiworld or its own world. 
+# NOTE: At the time that options are created, Manual has no concept of the multiworld or its own world.
 #       Options are defined before the world is even created.
 #
 # Example of creating your own option:
@@ -99,9 +99,25 @@ def before_options_defined(options: dict) -> dict:
     options["main_duties"] = IncludeMainScenario
 
     options["gear_mode"] = GearMode
-    
+
     return options
 
 # This is called after any manual options are defined, in case you want to see what options are defined or want to modify the defined options
-def after_options_defined(options: dict) -> dict:
-    return options
+def after_options_defined(options: Type[PerGameCommonOptions]):
+    # To access a modifiable version of options check the dict in options.type_hints
+    # For example if you want to change DLC_enabled's display name you would do:
+    # options.type_hints["DLC_enabled"].display_name = "New Display Name"
+
+    #  Here's an example on how to add your aliases to the generated goal
+    # options.type_hints['goal'].aliases.update({"example": 0, "second_alias": 1})
+    # options.type_hints['goal'].options.update({"example": 0, "second_alias": 1})  #for an alias to be valid it must also be in options
+
+    pass
+
+# Use this Hook if you want to add your Option to an Option group (existing or not)
+def before_option_groups_created(groups: dict[str, list[Option]]) -> dict[str, list[Option]]:
+    # Uses the format groups['GroupName'] = [TotalCharactersToWinWith]
+    return groups
+
+def after_option_groups_created(groups: list[OptionGroup]) -> list[OptionGroup]:
+    return groups

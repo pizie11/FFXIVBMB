@@ -27,6 +27,10 @@ from ..Helpers import is_option_enabled, get_option_value
 ## The fill_slot_data method will be used to send data to the Manual client for later use, like deathlink.
 ########################################################################################
 
+# Use this function to change the valid filler items to be created to replace item links or starting items.
+# Default value is the `filler_item_name` from game.json
+def hook_get_filler_item_name(world: World, multiworld: MultiWorld, player: int) -> str | bool:
+    return False
 
 
 # Called before regions and locations are created. Not clear why you'd want this, but it's here.
@@ -38,8 +42,8 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 
     # Include Basic Instinct in requirements for duties if going solo
     if party_size == 0:
-        region_table["Duty"]["requires"] += " and |#91 Basic Instinct|" 
-    
+        region_table["Duty"]["requires"] += " and |#91 Basic Instinct|"
+
     locations_to_remove = []
     # Remove locations based on options
     for location in world.location_table:
@@ -95,8 +99,37 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
     #             region["requires"] = "|#77 Aetherial Mimicry| and |#58 Pom Cure| and |Spell Slot:2|"
 
 
-    
-    
+# The item pool before starting items are processed, in case you want to see the raw item pool at that stage
+def before_create_items_starting(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
+    return item_pool
+
+# The item pool after starting items are processed but before filler is added, in case you want to see the raw item pool at that stage
+def before_create_items_filler(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
+    # Use this hook to remove items from the item pool
+    itemNamesToRemove = [] # List of item names
+
+    # Add your code here to calculate which items to remove.
+    #
+    # Because multiple copies of an item can exist, you need to add an item name
+    # to the list multiple times if you want to remove multiple copies of it.
+
+    for itemName in itemNamesToRemove:
+        item = next(i for i in item_pool if i.name == itemName)
+        item_pool.remove(item)
+
+    return item_pool
+
+    # Some other useful hook options:
+
+    ## Place an item at a specific location
+    # location = next(l for l in multiworld.get_unfilled_locations(player=player) if l.name == "Location Name")
+    # item_to_place = next(i for i in item_pool if i.name == "Item Name")
+    # location.place_locked_item(item_to_place)
+    # item_pool.remove(item_to_place)
+
+# The complete item pool prior to being set for generation is provided here, in case you want to make changes to it
+def after_create_items(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
+    return item_pool
 
 # Called before rules for accessing regions and locations are created. Not clear why you'd want this, but it's here.
 def before_set_rules(world: World, multiworld: MultiWorld, player: int):
@@ -142,3 +175,27 @@ def before_fill_slot_data(slot_data: dict, world: World, multiworld: MultiWorld,
 # This is called after slot data is set and provides the slot data at the time, in case you want to check and modify it after Manual is done with it
 def after_fill_slot_data(slot_data: dict, world: World, multiworld: MultiWorld, player: int) -> dict:
     return slot_data
+
+
+# This is called right at the end, in case you want to write stuff to the spoiler log
+def before_write_spoiler(world: World, multiworld: MultiWorld, spoiler_handle) -> None:
+    pass
+
+# This is called when you want to add information to the hint text
+def before_extend_hint_information(hint_data: dict[int, dict[int, str]], world: World, multiworld: MultiWorld, player: int) -> None:
+
+    ### Example way to use this hook:
+    # if player not in hint_data:
+    #     hint_data.update({player: {}})
+    # for location in multiworld.get_locations(player):
+    #     if not location.address:
+    #         continue
+    #
+    #     use this section to calculate the hint string
+    #
+    #     hint_data[player][location.address] = hint_string
+
+    pass
+
+def after_extend_hint_information(hint_data: dict[int, dict[int, str]], world: World, multiworld: MultiWorld, player: int) -> None:
+    pass
