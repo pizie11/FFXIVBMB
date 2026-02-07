@@ -49,12 +49,12 @@ jobs:
               id: get_version
               uses: mikefarah/yq@v4.45.1
               with:
-                  cmd: yq .world_version Archipelago/worlds/${{ env.world }}/archipelago.json --unwrapScalar=true
+                  cmd: yq .world_version ${{ env.world }}/archipelago.json --unwrapScalar=true
             - name: Get Name
               id: get_name
               uses: mikefarah/yq@v4.45.1
               with:
-                  cmd: yq .game worlds/${{ env.world }}/archipelago.json --unwrapScalar=true
+                  cmd: yq .game ${{ env.world }}/archipelago.json --unwrapScalar=true
             - name: Create release
               uses: ncipollo/release-action@v1
               with:
