@@ -1,0 +1,23 @@
+on:
+    workflow_dispatch:
+    schedule:
+      - cron: 0 0 1 * * # Runs at 00:00 on the first day of every month
+
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Update manual
+        uses: silasary/ap_manuals/update-manual@main
+        with:
+          allow_unstable: 'true'
+          directory: manual_ffxivbmb_pizzie
+
+      - uses: stefanzweifel/git-auto-commit-action@v5

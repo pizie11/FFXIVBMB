@@ -1,6 +1,7 @@
 {
+    "$schema": "https://raw.githubusercontent.com/ManualForArchipelago/Manual/main/schemas/Manual.game.schema.json",
 	"game": "FFXIVBMB",
-	"player": "Pizzie",
+	"creator": "Pizzie",
 	"filler_item_name": "Lagomorph (Filler)",
 	"starting_items":[
         {
