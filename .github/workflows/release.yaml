@@ -61,4 +61,4 @@ jobs:
                   name: FFXIV BMB ${{ steps.get_version.outputs.result }}
                   tag: ${{ steps.get_version.outputs.result }}
                   commit: ${{ env.GITHUB_REF }}
-                  artifacts: "${{ env.world }}.apworld"
+                  artifacts: "Archipelago/build/apworlds/${{ env.world }}.apworld"
