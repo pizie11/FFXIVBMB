@@ -1,6 +1,7 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
+from typing import Any
 from worlds.AutoWorld import World
-from BaseClasses import MultiWorld
+from BaseClasses import MultiWorld, CollectionState, Item
 
 # Object classes from Manual -- extending AP core -- representing items and locations that are used in generation
 from ..Items import ManualItem
@@ -140,7 +141,7 @@ def after_set_rules(world: World, multiworld: MultiWorld, player: int):
     pass
 
 # The complete item pool prior to being set for generation is provided here, in case you want to make changes to it
-def before_generate_basic(world: World, multiworld: MultiWorld, player: int) -> list:
+def before_generate_basic(world: World, multiworld: MultiWorld, player: int) -> None:
     pass
 
 # This method is run at the very end of pre-generation, once the place_item options have been handled and before AP generation occurs

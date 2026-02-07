@@ -2,6 +2,7 @@ from math import ceil
 
 import csv
 import pkgutil
+from typing import Any
 
 short_long = {
     "MLN": "Middle La Noscea",
@@ -277,7 +278,7 @@ def after_load_meta_file(meta_table: dict) -> dict:
 # called when an external tool (eg Universal Tracker) ask for slot data to be read
 # use this if you want to restore more data
 # return True if you want to trigger a regeneration if you changed anything
-def hook_interpret_slot_data(world, player: int, slot_data: dict[str, any]) -> dict | bool:
+def hook_interpret_slot_data(world, player: int, slot_data: dict[str, Any]) -> dict | bool:
     return False
 
 
